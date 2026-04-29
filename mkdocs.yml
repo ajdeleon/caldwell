@@ -1,6 +1,10 @@
 site_name: Ctown Dev
+site_url: https://caldwell.pages.dev
+site_description: City of Caldwell budget visualizations
+
 theme:
   name: material
+  custom_dir: docs/overrides
 
 docs_dir: docs
 site_dir: site

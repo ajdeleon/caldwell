@@ -1,3 +1,5 @@
 mkdocs-material
 watchdog
 mkdocs-table-reader-plugin
+plotly
+pandas
