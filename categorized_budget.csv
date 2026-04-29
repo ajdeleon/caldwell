@@ -1,0 +1,192 @@
+Category,Account Code,Account Name,2025,2026
+Taxes & Franchise Fees,31100,Property Taxes,29970622,32477451
+Taxes & Franchise Fees,31102,Property Tax Replacement,253919,254773
+Taxes & Franchise Fees,31810,Franchise Fees,715000,740000
+Taxes & Franchise Fees,31820,Cable Franchise,60000,60000
+Taxes & Franchise Fees,31830,Electricity Franchise Fee,400000,415000
+Taxes & Franchise Fees,31831,Electricity Franchise Fee,0,0
+Licenses & Permits,32110,Beer/Wine/Liquor License Fees,40000,40000
+Licenses & Permits,32120,Liquor Licenses,0,0
+Licenses & Permits,32130,Catering Permits,2400,2400
+Licenses & Permits,32150,Misc Business Permits,14559,18200
+Licenses & Permits,32210,Building Permits,2502600,2692600
+Licenses & Permits,32211,Building Permit/Engineering Rev,175000,325000
+Licenses & Permits,32220,Electrical Permits,313420,537100
+Licenses & Permits,32230,Plumbing Permits,301100,426500
+Licenses & Permits,32240,Plan Check Fees,852125,1127200
+Licenses & Permits,32255,Investigation Fees,5000,10000
+Licenses & Permits,32260,Misc. Building Permits,2003,5000
+Licenses & Permits,32261,Mechanical Permit,365100,363700
+Licenses & Permits,32264,Sign Permits,5900,7500
+Intergovernmental & Grants,33100,Federal Grant,1085759,52063054
+Intergovernmental & Grants,33110,Vallivue Resource Officer,278775,300000
+Intergovernmental & Grants,33111,Caldwell District Res Officer,18,268
+Intergovernmental & Grants,33116,Elevate Acadamy Res Officer,89285,97374
+Intergovernmental & Grants,33117,Thomas Jeffereson/Heritage SRO,89285,138512
+Intergovernmental & Grants,33150,Dept of Transportation Reimb.,0,0
+Intergovernmental & Grants,33200,Urban Renewal Projects,123520,385900
+Intergovernmental & Grants,33400,State Grants,10300,20000
+Intergovernmental & Grants,33530,St Rev Shared Sales Tax,6462846,6191153
+Intergovernmental & Grants,33540,Gas Tax,4991928,5656544
+Intergovernmental & Grants,33550,Road & Bridge St Revenue,11900,25000
+Intergovernmental & Grants,33570,State Liquor Apportionment,652570,610000
+Intergovernmental & Grants,33910,Payment In Lieu Of Taxes,0,0
+Charges for Services: General,34005,Alcohol Sale/20% Of Sales,17900,13600
+Charges for Services: General,34010,Charges for Services,31372177,33896836
+Charges for Services: General,34011,Tax Collected/Contracted Service,66641,101866
+Charges for Services: Parks & Recreation,34012,Recycling,727719,1691067
+Charges for Services: General,34013,Special Project Services,1000000,3921632
+Charges for Services: Public Safety,34016,Code Enforcement Charges,45000,26130
+Charges for Services: Utilities,34018,Water Hydrant Fee,25000,14900
+Charges for Services: Parks & Recreation,34020,Bad Debt Recovery,2600,3100
+Charges for Services: General,34030,Admin/Payroll Services,2844250,2688025
+Charges for Services: General,34031,Senior Citizen Van Fees,2000,2000
+Charges for Services: General,34036,CAP Facilties,500264,432389
+Charges for Services: Utilities,34040,Utility Billing Services,846895,804219
+Charges for Services: General,34041,Line Locate CAP,44000,34650
+Charges for Services: Utilities,34042,Meter CAP,282,740
+Charges for Services: General,34050,City Attorney Services,50,5358
+Charges for Services: General,34061,Asphalt Repair Charges,25,0
+Charges for Services: General,34062,Distribution System Connection Fee,1259217,3231020
+Charges for Services: General,34063,60% Capital Improvement Fee,0,0
+Charges for Services: General,34064,Interceptor Fee,2000000,1571091
+Charges for Services: General,34065,Main Extension Fee,105503,1955800
+Charges for Services: Planning & Engineering,34066,Impact Fee-Pump Development,0,0
+Charges for Services: Public Safety,34067,Fireline Connection,65000,33300
+Charges for Services: General,34069,Residential/Industrial Trunk,1500,0
+Charges for Services: Utilities,34070,Meter Installation,752000,1113600
+Charges for Services: General,34080,Turn On Fees,235800,416300
+Charges for Services: General,34090,Septic Dump Services,108538,6828445
+Charges for Services: Planning & Engineering,34095,Treat. Plant Capacity Fee,1947965,1614088
+Charges for Services: General,34110,Rebates/Discounts,0,0
+Charges for Services: Planning & Engineering,34111,Eng/Subdivision Plats,208400,225000
+Charges for Services: Planning & Engineering,34113,Eng/Special Use Permit Non-PUD,5000,7500
+Charges for Services: Planning & Engineering,34115,Eng/Annexation,5000,7500
+Charges for Services: General,34117,Building Permit/P&Z Review Fee,285500,847500
+Charges for Services: Planning & Engineering,34118,Development Agreements (P&Z),23500,14400
+Charges for Services: Planning & Engineering,34121,Subdivision Plats Non-PUD,140500,158500
+Charges for Services: General,34123,Special Use Permits,21720,17500
+Charges for Services: Planning & Engineering,34124,Planned Unit Developments,650,590
+Charges for Services: Planning & Engineering,34125,Zone Change,2000,5000
+Charges for Services: General,34126,Text Amendment,50,0
+Charges for Services: Planning & Engineering,34127,Annexation,26035,36000
+Charges for Services: Planning & Engineering,34129,Comp Plan Map Amendment,190,110
+Charges for Services: Planning & Engineering,34131,Comp Plan Text Amendment,0,0
+Charges for Services: Planning & Engineering,34132,Plat Amendment,39667,31600
+Charges for Services: General,34133,Appeals,1,0
+Charges for Services: General,34135,Legal Notice Advertising,0,0
+Charges for Services: General,34136,Home Occupation Permit,6168,7500
+Charges for Services: General,34137,Administrative Determination,3120,5000
+Charges for Services: General,34139,Comm Dev Maps & Copies,500,1000
+Charges for Services: General,34140,Printing & Duplication Fees,12500,12000
+Charges for Services: Utilities,34150,Sewer Connect Permits (Eng),1000,1000
+Charges for Services: Planning & Engineering,34160,Engineering Services Revenues,3162352,2699728
+Charges for Services: General,34161,Mapping Revenue (GIS),621000,589453
+Charges for Services: General,34163,Electrical Service,346700,416770
+Charges for Services: General,34164,MS4 Service Revenue,1622090,2177729
+Charges for Services: General,34180,Payroll Health Deduct,6528576,7359193
+Charges for Services: General,34181,Payroll Health Deduction-EE,970784,990200
+Charges for Services: General,34190,Miscellaneous Revenue,388900,296600
+Charges for Services: General,34191,Community Program Revenue,146200,141200
+Charges for Services: General,34192,"Bldg/""Reimbursable Expense""",0,0
+Charges for Services: General,34193,Miscellaneous Revenue,5000,5000
+Charges for Services: General,34195,Hanger Tie Down Fees,15000,19200
+Charges for Services: General,34197,Fuel Flowage Fee,10,0
+Charges for Services: General,34210,VIN Inspections,0,0
+Charges for Services: General,34211,Pet License Revenue,35000,15500
+Charges for Services: Public Safety,34285,Spec Event Securty/Police,32000,22000
+Charges for Services: Public Safety,34290,Miscellaneous Police,75000,131000
+Charges for Services: Public Safety,34292,Police/Reimbursable Revenue,80,0
+Charges for Services: General,34293,"Cops, Kids, and Community Donations",15000,10000
+Charges for Services: Public Safety,34310,Rural Fire Dist Fee,2272447,2931401
+Charges for Services: Public Safety,34313,Rural Fire Plan Reviews,0,0
+Charges for Services: General,34315,Lost/Damaged,5500,5000
+Charges for Services: Public Safety,34317,Fire/Tank Removal Fee,0,0
+Charges for Services: Public Safety,34320,Misc. Fire Permits,8,500
+Charges for Services: Public Safety,34327,Fire Plan Review Fees,165000,185000
+Charges for Services: Planning & Engineering,34328,Plat Review Fees,21000,21200
+Charges for Services: Public Safety,34330,Fire/Inspections,12000,20000
+Charges for Services: Public Safety,34333,Fire Sprinkler/Alarm Reviews,129000,160100
+Charges for Services: General,34337,HazMat State Reimbursement,40000,20000
+Charges for Services: Public Safety,34390,Fire Miscellaneous Revenue,35000,63000
+Charges for Services: Parks & Recreation,34570,PS - Concessions,198700,225000
+Charges for Services: Parks & Recreation,34571,PS - Golf Cart Consessions,0,0
+Charges for Services: General,34710,Program Revenues,215000,313000
+Charges for Services: General,34711,Program Revenues/Taxable,5000,7500
+Charges for Services: General,34712,Senior Tours,25000,25000
+Charges for Services: General,34713,Uniform/Costume Fees,2500,2500
+Charges for Services: General,34715,Player's Fees,10,0
+Charges for Services: General,34716,Player's Fees/Taxable,5000,10000
+Charges for Services: Parks & Recreation,34717,Rec Boxing Program Revenue,7000,10000
+Charges for Services: Parks & Recreation,34718,Rec Boxing Retail Sales/Taxable,500,2000
+Charges for Services: General,34720,Facilities Rental,103000,103000
+Charges for Services: General,34725,Facility Clean Up Charge,5000,10000
+Charges for Services: General,34730,Rodeo Lease Revenue,8000,8000
+Charges for Services: General,34735,Charge/Event Security Service,5000,10000
+Charges for Services: General,34736,City Sponsored Events,10670,10000
+Charges for Services: Parks & Recreation,34740,Swimming Pool Admission/Rental,60000,60000
+Charges for Services: Parks & Recreation,34745,Swimming Pool Lessons,5,0
+Charges for Services: General,34750,Concessions,76600,80000
+Charges for Services: General,34760,Advertising Revenue,2800,5000
+Charges for Services: General,34770,Forestry Miscellaneous Revenue,0,0
+Charges for Services: General,34773,Impact Fees,2620100,4803400
+Charges for Services: Parks & Recreation,34774,Park Impact Fees,2300000,3212700
+Charges for Services: General,34775,Oral History,0,0
+Charges for Services: General,34777,Summer Reading,1000,1000
+Charges for Services: Parks & Recreation,34780,Band Shell Rental,12000,12000
+Charges for Services: Parks & Recreation,34781,Mallard Park Shelter Rentals,20000,20000
+Charges for Services: Parks & Recreation,34782,Pipe Dream Park Shelter Rental,1000,1000
+Charges for Services: General,34785,Luby Gazebo,2000,2000
+Charges for Services: General,34790,Rose Garden Rental,1100,1100
+Charges for Services: Parks & Recreation,34795,Parks Miscellaneous Revenue,262578,314912
+Charges for Services: Parks & Recreation,34796,Curtis Park Rental,4000,4400
+Charges for Services: General,34810,Sale of Lots,86000,86000
+Charges for Services: General,34820,Grave Fees,126900,137200
+Charges for Services: General,34840,Saturday Burials,7000,7500
+Charges for Services: General,34910,Season Ticket Revenue,190900,250000
+Charges for Services: Parks & Recreation,34911,FV - Season Ticket Revenue,48000,50000
+Charges for Services: Parks & Recreation,34930,PS - Green Fees,662300,725000
+Charges for Services: Parks & Recreation,34931,FV - Green Fees,202500,212600
+Charges for Services: Parks & Recreation,34940,PS - Trail Fees,32000,33600
+Charges for Services: Parks & Recreation,34941,Daily Trail Fees,13000,13200
+Charges for Services: General,34951,Pro Shop Revenue,154000,180000
+Charges for Services: General,34953,PS Range Fees,64000,67200
+Fines & Special Assessments,35110,Court Fines,180000,109600
+Fines & Special Assessments,35120,Overtime Parking Fines,0,0
+Fines & Special Assessments,35130,Library Fines,3500,3500
+Fines & Special Assessments,35140,Past Due Charges,0,0
+Fines & Special Assessments,35510,Special Assessments,480000,523652
+"Interest, Rents & Leases",36105,Accrued Interest Revenue,12,0
+"Interest, Rents & Leases",36106,Claims Interest,7480,8438
+"Interest, Rents & Leases",36110,Investment Interest Revenue,2519800,1801000
+"Interest, Rents & Leases",36120,Spec Assess Interest Rev,16000,30059
+"Interest, Rents & Leases",36130,Interest Revenue GASB,87,0
+"Interest, Rents & Leases",36310,Building Rental,36,62
+"Interest, Rents & Leases",36315,Airport Electricity,13500,13584
+"Interest, Rents & Leases",36316,Electricity/One-Time Fee,0,0
+"Interest, Rents & Leases",36320,Land Lease,335681,373709
+"Interest, Rents & Leases",36321,Lease Revenue GASB,8,7
+"Interest, Rents & Leases",36322,Lease Revenue Offset GASB,87,0
+"Interest, Rents & Leases",36330,PS - Cart Storage,26000,29600
+"Interest, Rents & Leases",36331,FV - Cart Storage Rental,2800,3000
+"Interest, Rents & Leases",36335,PS - Cart Rental,312300,312300
+"Interest, Rents & Leases",36336,FV - Cart Rental,97000,97000
+"Interest, Rents & Leases",36340,Train Depot Rental,22000,15000
+"Interest, Rents & Leases",36998,Gain/Loss on Capital Assets,0,0
+"Interest, Rents & Leases",36999,Unrealized Gain or Loss,0,0
+Donations & Special Events,37521,Van Slyke Museum Donations,6000,6000
+Donations & Special Events,37542,Caldwell Youth Forum Rev,20,0
+Donations & Special Events,37543,K9 Community Donations,0,0
+Donations & Special Events,37558,Friends of the Depot,0,0
+Donations & Special Events,37560,Smoke Detector Program,10,0
+Donations & Special Events,37600,Gifts/Donations,35000,105000
+Donations & Special Events,37610,Endowments,5000,5000
+Donations & Special Events,37620,4th of July Celebration/Revenue,65000,65000
+Donations & Special Events,37670,Recreation Secret Pals,50,0
+Transfers & Other Sources,38100,Contributed Capital,0,0
+Transfers & Other Sources,39100,Interfund Oper Transfer In,1456897,3930952
+Transfers & Other Sources,39125,Other Grants,10,0
+Transfers & Other Sources,39200,Sale of Fixed Asset,26,0
+Transfers & Other Sources,39250,Proceeds From Insurance,0,0
+Transfers & Other Sources,39340,Bond Proceeds,0,0
+Transfers & Other Sources,39360,Loan/Lease Proceeds,0,0
