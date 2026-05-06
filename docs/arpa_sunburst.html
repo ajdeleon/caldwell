@@ -1,0 +1,877 @@
+<!doctype html>
+<html>
+    <head>
+        <meta property="og:title" content="Caldwell SLFRF Spending" />
+        <meta
+            property="og:description"
+            content="Interactive breakdown of Caldwell's SLFRF spending by category and project."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://caldwell.pages.dev.com" />
+        <meta
+            property="og:image"
+            content="https://caldwell.pages.dev/arpa_sunburst.html"
+        />
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Caldwell SLFRF Spending</title>
+        <style>
+            *,
+            *::before,
+            *::after {
+                box-sizing: border-box;
+            }
+            body {
+                font-family:
+                    -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+                margin: 0;
+                padding: 12px;
+                background: #fff;
+            }
+            #sunburst-chart {
+                width: 100% !important;
+            }
+            #desc-panel {
+                margin-top: 8px;
+                padding: 14px 16px;
+                background: #f5f5f5;
+                border: 1px solid #ddd;
+                border-radius: 8px;
+            }
+            #desc-hint {
+                color: #999;
+                font-style: italic;
+                font-size: 14px;
+            }
+            #desc-content {
+                display: none;
+            }
+            #desc-title {
+                margin: 0 0 6px;
+                font-size: 15px;
+                font-weight: 600;
+                color: #222;
+            }
+            #desc-body {
+                margin: 0;
+                font-size: 14px;
+                line-height: 1.65;
+                color: #555;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <script>
+                window.PlotlyConfig = { MathJaxConfig: "local" };
+            </script>
+            <script
+                charset="utf-8"
+                src="https://cdn.plot.ly/plotly-3.5.0.min.js"
+                integrity="sha256-fHbNLP+GlIXN+efbQec78UkemUz3NJp7UmfGxC1tNxs="
+                crossorigin="anonymous"
+            ></script>
+            <div
+                id="sunburst-chart"
+                class="plotly-graph-div"
+                style="height: 100%; width: 100%"
+            ></div>
+            <script>
+                window.PLOTLYENV = window.PLOTLYENV || {};
+                if (document.getElementById("sunburst-chart")) {
+                    Plotly.newPlot(
+                        "sunburst-chart",
+                        [
+                            {
+                                branchvalues: "total",
+                                customdata: [
+                                    ["Community & Admin"],
+                                    ["Community & Admin"],
+                                    ["Community & Admin"],
+                                    ["Community & Admin"],
+                                    ["Community & Admin"],
+                                    ["Community & Admin"],
+                                    ["Community & Admin"],
+                                    ["Community & Admin"],
+                                    ["Fire"],
+                                    ["Fire"],
+                                    ["Fire"],
+                                    ["Fire"],
+                                    ["Fire"],
+                                    ["Fire"],
+                                    ["Fire"],
+                                    ["Fire"],
+                                    ["Fire"],
+                                    ["Fire"],
+                                    ["Infrastructure & Technology"],
+                                    ["Infrastructure & Technology"],
+                                    ["Infrastructure & Technology"],
+                                    ["Police"],
+                                    ["Police"],
+                                    ["Police"],
+                                    ["Police"],
+                                    ["Police"],
+                                    ["Police"],
+                                    ["Police"],
+                                    ["Police"],
+                                    ["Police\u002fFire Shared"],
+                                    ["Police\u002fFire Shared"],
+                                    ["Police\u002fFire Shared"],
+                                    ["Police\u002fFire Shared"],
+                                ],
+                                domain: { x: [0.0, 1.0], y: [0.0, 1.0] },
+                                hovertemplate:
+                                    "labels=%{label}\u003cbr\u003eObligations=%{value}\u003cbr\u003eparent=%{parent}\u003cbr\u003eid=%{id}\u003cbr\u003eCategory=%{customdata[0]}\u003cextra\u003e\u003c\u002fextra\u003e",
+                                ids: [
+                                    "Community & Admin",
+                                    "Community & Admin\u002fCity Comp Plan",
+                                    "Community & Admin\u002fLibrary Kiosk",
+                                    "Community & Admin\u002fPersonal Protective Equip Materials and Supplies",
+                                    "Community & Admin\u002fPaid Sick and Medical Leave Program",
+                                    "Community & Admin\u002fPublic Sector Staffing Needs",
+                                    "Community & Admin\u002fEconomic Development Vehicle",
+                                    "Community & Admin\u002fADMINISTRATIVE EXPENSES",
+                                    "Fire",
+                                    "Fire\u002fFire Logistics Vehcile",
+                                    "Fire\u002fFire-Knox System",
+                                    "Fire\u002fFire Response Squad",
+                                    "Fire\u002fFire Squad Unit",
+                                    "Fire\u002fFire-Radios",
+                                    "Fire\u002fFire-SCBA",
+                                    "Fire\u002fIncentive Pay (Fire)",
+                                    "Fire\u002fFire ESCI",
+                                    "Fire\u002fFire Training Vehicle",
+                                    "Infrastructure & Technology",
+                                    "Infrastructure & Technology\u002fITD Project: Lake Lowell Pathway",
+                                    "Infrastructure & Technology\u002fTelephone Alert System",
+                                    "Police\u002fPolice Drones",
+                                    "Police\u002fPolice-Radios",
+                                    "Police\u002fPolice-License Plate Reader Cameras",
+                                    "Police\u002fPolice Rescue Vehicle",
+                                    "Police\u002fPolice Worn Cameras",
+                                    "Police\u002fIncentive Pay (Police)",
+                                    "Police",
+                                    "Police\u002fPolice Software",
+                                    "Police\u002fFire Shared\u002fCEC Upgrades \u002f Disaster Recovery Center",
+                                    "Police\u002fFire Shared\u002fTraining Facility Mats",
+                                    "Police\u002fFire Shared\u002fPUBLIC SAFETY TRAINING FACILITY",
+                                    "Police\u002fFire Shared",
+                                ],
+                                labels: [
+                                    "Community & Admin",
+                                    "City Comp Plan",
+                                    "Library Kiosk",
+                                    "Personal Protective Equip Materials and Supplies",
+                                    "Paid Sick and Medical Leave Program",
+                                    "Public Sector Staffing Needs",
+                                    "Economic Development Vehicle",
+                                    "ADMINISTRATIVE EXPENSES",
+                                    "Fire",
+                                    "Fire Logistics Vehcile",
+                                    "Fire-Knox System",
+                                    "Fire Response Squad",
+                                    "Fire Squad Unit",
+                                    "Fire-Radios",
+                                    "Fire-SCBA",
+                                    "Incentive Pay (Fire)",
+                                    "Fire ESCI",
+                                    "Fire Training Vehicle",
+                                    "Infrastructure & Technology",
+                                    "ITD Project: Lake Lowell Pathway",
+                                    "Telephone Alert System",
+                                    "Police Drones",
+                                    "Police-Radios",
+                                    "Police-License Plate Reader Cameras",
+                                    "Police Rescue Vehicle",
+                                    "Police Worn Cameras",
+                                    "Incentive Pay (Police)",
+                                    "Police",
+                                    "Police Software",
+                                    "CEC Upgrades \u002f Disaster Recovery Center",
+                                    "Training Facility Mats",
+                                    "PUBLIC SAFETY TRAINING FACILITY",
+                                    "Police\u002fFire Shared",
+                                ],
+                                marker: {
+                                    colors: [
+                                        "#2ae07a",
+                                        "#2ae07a",
+                                        "#2ae07a",
+                                        "#2ae07a",
+                                        "#2ae07a",
+                                        "#2ae07a",
+                                        "#2ae07a",
+                                        "#2ae07a",
+                                        "#e05c2a",
+                                        "#e05c2a",
+                                        "#e05c2a",
+                                        "#e05c2a",
+                                        "#e05c2a",
+                                        "#e05c2a",
+                                        "#e05c2a",
+                                        "#e05c2a",
+                                        "#e05c2a",
+                                        "#e05c2a",
+                                        "#2aa0e0",
+                                        "#2aa0e0",
+                                        "#2aa0e0",
+                                        "#2a5ce0",
+                                        "#2a5ce0",
+                                        "#2a5ce0",
+                                        "#2a5ce0",
+                                        "#2a5ce0",
+                                        "#2a5ce0",
+                                        "#2a5ce0",
+                                        "#2a5ce0",
+                                        "#8b2ae0",
+                                        "#8b2ae0",
+                                        "#8b2ae0",
+                                        "#8b2ae0",
+                                    ],
+                                },
+                                name: "",
+                                parents: [
+                                    "",
+                                    "Community & Admin",
+                                    "Community & Admin",
+                                    "Community & Admin",
+                                    "Community & Admin",
+                                    "Community & Admin",
+                                    "Community & Admin",
+                                    "Community & Admin",
+                                    "",
+                                    "Fire",
+                                    "Fire",
+                                    "Fire",
+                                    "Fire",
+                                    "Fire",
+                                    "Fire",
+                                    "Fire",
+                                    "Fire",
+                                    "Fire",
+                                    "",
+                                    "Infrastructure & Technology",
+                                    "Infrastructure & Technology",
+                                    "Police",
+                                    "Police",
+                                    "Police",
+                                    "Police",
+                                    "Police",
+                                    "Police",
+                                    "",
+                                    "Police",
+                                    "Police\u002fFire Shared",
+                                    "Police\u002fFire Shared",
+                                    "Police\u002fFire Shared",
+                                    "",
+                                ],
+                                values: {
+                                    dtype: "f8",
+                                    bdata: "AAAAAAAVI0EAAAAAyPcFQQAAAAAwAQdBAAAAAAAElkAAAAAAMFwHQQAAAAAAwcRAAAAAAAAO4UAAAAAAABrSQAAAAAD+p0dBAAAAAGCb60AAAAAAoKUJQQAAAACMwxBBAAAAAHgfGEEAAAAATCMcQQAAAAC06yBBAAAAAICELkEAAAAAQE\u002f1QAAAAABg+e1AAAAAAErSNkEAAAAA52E1QQAAAAAwBvdAAAAAAGDG40AAAAAAcBIJQQAAAABoGRdBAAAAANSZGUEAAAAAKignQQAAAACAhC5BAAAAgLpfRkEAAAAAAL3\u002fQAAAAABYKQhBAAAAAAByx0AAAAAAIsInQQAAAABAKi5B",
+                                },
+                                type: "sunburst",
+                                textinfo: "label+percent entry",
+                            },
+                        ],
+                        {
+                            template: {
+                                data: {
+                                    histogram2dcontour: [
+                                        {
+                                            type: "histogram2dcontour",
+                                            colorbar: {
+                                                outlinewidth: 0,
+                                                ticks: "",
+                                            },
+                                            colorscale: [
+                                                [0.0, "#0d0887"],
+                                                [0.1111111111111111, "#46039f"],
+                                                [0.2222222222222222, "#7201a8"],
+                                                [0.3333333333333333, "#9c179e"],
+                                                [0.4444444444444444, "#bd3786"],
+                                                [0.5555555555555556, "#d8576b"],
+                                                [0.6666666666666666, "#ed7953"],
+                                                [0.7777777777777778, "#fb9f3a"],
+                                                [0.8888888888888888, "#fdca26"],
+                                                [1.0, "#f0f921"],
+                                            ],
+                                        },
+                                    ],
+                                    choropleth: [
+                                        {
+                                            type: "choropleth",
+                                            colorbar: {
+                                                outlinewidth: 0,
+                                                ticks: "",
+                                            },
+                                        },
+                                    ],
+                                    histogram2d: [
+                                        {
+                                            type: "histogram2d",
+                                            colorbar: {
+                                                outlinewidth: 0,
+                                                ticks: "",
+                                            },
+                                            colorscale: [
+                                                [0.0, "#0d0887"],
+                                                [0.1111111111111111, "#46039f"],
+                                                [0.2222222222222222, "#7201a8"],
+                                                [0.3333333333333333, "#9c179e"],
+                                                [0.4444444444444444, "#bd3786"],
+                                                [0.5555555555555556, "#d8576b"],
+                                                [0.6666666666666666, "#ed7953"],
+                                                [0.7777777777777778, "#fb9f3a"],
+                                                [0.8888888888888888, "#fdca26"],
+                                                [1.0, "#f0f921"],
+                                            ],
+                                        },
+                                    ],
+                                    heatmap: [
+                                        {
+                                            type: "heatmap",
+                                            colorbar: {
+                                                outlinewidth: 0,
+                                                ticks: "",
+                                            },
+                                            colorscale: [
+                                                [0.0, "#0d0887"],
+                                                [0.1111111111111111, "#46039f"],
+                                                [0.2222222222222222, "#7201a8"],
+                                                [0.3333333333333333, "#9c179e"],
+                                                [0.4444444444444444, "#bd3786"],
+                                                [0.5555555555555556, "#d8576b"],
+                                                [0.6666666666666666, "#ed7953"],
+                                                [0.7777777777777778, "#fb9f3a"],
+                                                [0.8888888888888888, "#fdca26"],
+                                                [1.0, "#f0f921"],
+                                            ],
+                                        },
+                                    ],
+                                    contourcarpet: [
+                                        {
+                                            type: "contourcarpet",
+                                            colorbar: {
+                                                outlinewidth: 0,
+                                                ticks: "",
+                                            },
+                                        },
+                                    ],
+                                    contour: [
+                                        {
+                                            type: "contour",
+                                            colorbar: {
+                                                outlinewidth: 0,
+                                                ticks: "",
+                                            },
+                                            colorscale: [
+                                                [0.0, "#0d0887"],
+                                                [0.1111111111111111, "#46039f"],
+                                                [0.2222222222222222, "#7201a8"],
+                                                [0.3333333333333333, "#9c179e"],
+                                                [0.4444444444444444, "#bd3786"],
+                                                [0.5555555555555556, "#d8576b"],
+                                                [0.6666666666666666, "#ed7953"],
+                                                [0.7777777777777778, "#fb9f3a"],
+                                                [0.8888888888888888, "#fdca26"],
+                                                [1.0, "#f0f921"],
+                                            ],
+                                        },
+                                    ],
+                                    surface: [
+                                        {
+                                            type: "surface",
+                                            colorbar: {
+                                                outlinewidth: 0,
+                                                ticks: "",
+                                            },
+                                            colorscale: [
+                                                [0.0, "#0d0887"],
+                                                [0.1111111111111111, "#46039f"],
+                                                [0.2222222222222222, "#7201a8"],
+                                                [0.3333333333333333, "#9c179e"],
+                                                [0.4444444444444444, "#bd3786"],
+                                                [0.5555555555555556, "#d8576b"],
+                                                [0.6666666666666666, "#ed7953"],
+                                                [0.7777777777777778, "#fb9f3a"],
+                                                [0.8888888888888888, "#fdca26"],
+                                                [1.0, "#f0f921"],
+                                            ],
+                                        },
+                                    ],
+                                    mesh3d: [
+                                        {
+                                            type: "mesh3d",
+                                            colorbar: {
+                                                outlinewidth: 0,
+                                                ticks: "",
+                                            },
+                                        },
+                                    ],
+                                    scatter: [
+                                        {
+                                            fillpattern: {
+                                                fillmode: "overlay",
+                                                size: 10,
+                                                solidity: 0.2,
+                                            },
+                                            type: "scatter",
+                                        },
+                                    ],
+                                    parcoords: [
+                                        {
+                                            type: "parcoords",
+                                            line: {
+                                                colorbar: {
+                                                    outlinewidth: 0,
+                                                    ticks: "",
+                                                },
+                                            },
+                                        },
+                                    ],
+                                    scatterpolargl: [
+                                        {
+                                            type: "scatterpolargl",
+                                            marker: {
+                                                colorbar: {
+                                                    outlinewidth: 0,
+                                                    ticks: "",
+                                                },
+                                            },
+                                        },
+                                    ],
+                                    bar: [
+                                        {
+                                            error_x: { color: "#2a3f5f" },
+                                            error_y: { color: "#2a3f5f" },
+                                            marker: {
+                                                line: {
+                                                    color: "#E5ECF6",
+                                                    width: 0.5,
+                                                },
+                                                pattern: {
+                                                    fillmode: "overlay",
+                                                    size: 10,
+                                                    solidity: 0.2,
+                                                },
+                                            },
+                                            type: "bar",
+                                        },
+                                    ],
+                                    scattergeo: [
+                                        {
+                                            type: "scattergeo",
+                                            marker: {
+                                                colorbar: {
+                                                    outlinewidth: 0,
+                                                    ticks: "",
+                                                },
+                                            },
+                                        },
+                                    ],
+                                    scatterpolar: [
+                                        {
+                                            type: "scatterpolar",
+                                            marker: {
+                                                colorbar: {
+                                                    outlinewidth: 0,
+                                                    ticks: "",
+                                                },
+                                            },
+                                        },
+                                    ],
+                                    histogram: [
+                                        {
+                                            marker: {
+                                                pattern: {
+                                                    fillmode: "overlay",
+                                                    size: 10,
+                                                    solidity: 0.2,
+                                                },
+                                            },
+                                            type: "histogram",
+                                        },
+                                    ],
+                                    scattergl: [
+                                        {
+                                            type: "scattergl",
+                                            marker: {
+                                                colorbar: {
+                                                    outlinewidth: 0,
+                                                    ticks: "",
+                                                },
+                                            },
+                                        },
+                                    ],
+                                    scatter3d: [
+                                        {
+                                            type: "scatter3d",
+                                            line: {
+                                                colorbar: {
+                                                    outlinewidth: 0,
+                                                    ticks: "",
+                                                },
+                                            },
+                                            marker: {
+                                                colorbar: {
+                                                    outlinewidth: 0,
+                                                    ticks: "",
+                                                },
+                                            },
+                                        },
+                                    ],
+                                    scattermap: [
+                                        {
+                                            type: "scattermap",
+                                            marker: {
+                                                colorbar: {
+                                                    outlinewidth: 0,
+                                                    ticks: "",
+                                                },
+                                            },
+                                        },
+                                    ],
+                                    scattermapbox: [
+                                        {
+                                            type: "scattermapbox",
+                                            marker: {
+                                                colorbar: {
+                                                    outlinewidth: 0,
+                                                    ticks: "",
+                                                },
+                                            },
+                                        },
+                                    ],
+                                    scatterternary: [
+                                        {
+                                            type: "scatterternary",
+                                            marker: {
+                                                colorbar: {
+                                                    outlinewidth: 0,
+                                                    ticks: "",
+                                                },
+                                            },
+                                        },
+                                    ],
+                                    scattercarpet: [
+                                        {
+                                            type: "scattercarpet",
+                                            marker: {
+                                                colorbar: {
+                                                    outlinewidth: 0,
+                                                    ticks: "",
+                                                },
+                                            },
+                                        },
+                                    ],
+                                    carpet: [
+                                        {
+                                            aaxis: {
+                                                endlinecolor: "#2a3f5f",
+                                                gridcolor: "white",
+                                                linecolor: "white",
+                                                minorgridcolor: "white",
+                                                startlinecolor: "#2a3f5f",
+                                            },
+                                            baxis: {
+                                                endlinecolor: "#2a3f5f",
+                                                gridcolor: "white",
+                                                linecolor: "white",
+                                                minorgridcolor: "white",
+                                                startlinecolor: "#2a3f5f",
+                                            },
+                                            type: "carpet",
+                                        },
+                                    ],
+                                    table: [
+                                        {
+                                            cells: {
+                                                fill: { color: "#EBF0F8" },
+                                                line: { color: "white" },
+                                            },
+                                            header: {
+                                                fill: { color: "#C8D4E3" },
+                                                line: { color: "white" },
+                                            },
+                                            type: "table",
+                                        },
+                                    ],
+                                    barpolar: [
+                                        {
+                                            marker: {
+                                                line: {
+                                                    color: "#E5ECF6",
+                                                    width: 0.5,
+                                                },
+                                                pattern: {
+                                                    fillmode: "overlay",
+                                                    size: 10,
+                                                    solidity: 0.2,
+                                                },
+                                            },
+                                            type: "barpolar",
+                                        },
+                                    ],
+                                    pie: [{ automargin: true, type: "pie" }],
+                                },
+                                layout: {
+                                    autotypenumbers: "strict",
+                                    colorway: [
+                                        "#636efa",
+                                        "#EF553B",
+                                        "#00cc96",
+                                        "#ab63fa",
+                                        "#FFA15A",
+                                        "#19d3f3",
+                                        "#FF6692",
+                                        "#B6E880",
+                                        "#FF97FF",
+                                        "#FECB52",
+                                    ],
+                                    font: { color: "#2a3f5f" },
+                                    hovermode: "closest",
+                                    hoverlabel: { align: "left" },
+                                    paper_bgcolor: "white",
+                                    plot_bgcolor: "#E5ECF6",
+                                    polar: {
+                                        bgcolor: "#E5ECF6",
+                                        angularaxis: {
+                                            gridcolor: "white",
+                                            linecolor: "white",
+                                            ticks: "",
+                                        },
+                                        radialaxis: {
+                                            gridcolor: "white",
+                                            linecolor: "white",
+                                            ticks: "",
+                                        },
+                                    },
+                                    ternary: {
+                                        bgcolor: "#E5ECF6",
+                                        aaxis: {
+                                            gridcolor: "white",
+                                            linecolor: "white",
+                                            ticks: "",
+                                        },
+                                        baxis: {
+                                            gridcolor: "white",
+                                            linecolor: "white",
+                                            ticks: "",
+                                        },
+                                        caxis: {
+                                            gridcolor: "white",
+                                            linecolor: "white",
+                                            ticks: "",
+                                        },
+                                    },
+                                    coloraxis: {
+                                        colorbar: {
+                                            outlinewidth: 0,
+                                            ticks: "",
+                                        },
+                                    },
+                                    colorscale: {
+                                        sequential: [
+                                            [0.0, "#0d0887"],
+                                            [0.1111111111111111, "#46039f"],
+                                            [0.2222222222222222, "#7201a8"],
+                                            [0.3333333333333333, "#9c179e"],
+                                            [0.4444444444444444, "#bd3786"],
+                                            [0.5555555555555556, "#d8576b"],
+                                            [0.6666666666666666, "#ed7953"],
+                                            [0.7777777777777778, "#fb9f3a"],
+                                            [0.8888888888888888, "#fdca26"],
+                                            [1.0, "#f0f921"],
+                                        ],
+                                        sequentialminus: [
+                                            [0.0, "#0d0887"],
+                                            [0.1111111111111111, "#46039f"],
+                                            [0.2222222222222222, "#7201a8"],
+                                            [0.3333333333333333, "#9c179e"],
+                                            [0.4444444444444444, "#bd3786"],
+                                            [0.5555555555555556, "#d8576b"],
+                                            [0.6666666666666666, "#ed7953"],
+                                            [0.7777777777777778, "#fb9f3a"],
+                                            [0.8888888888888888, "#fdca26"],
+                                            [1.0, "#f0f921"],
+                                        ],
+                                        diverging: [
+                                            [0, "#8e0152"],
+                                            [0.1, "#c51b7d"],
+                                            [0.2, "#de77ae"],
+                                            [0.3, "#f1b6da"],
+                                            [0.4, "#fde0ef"],
+                                            [0.5, "#f7f7f7"],
+                                            [0.6, "#e6f5d0"],
+                                            [0.7, "#b8e186"],
+                                            [0.8, "#7fbc41"],
+                                            [0.9, "#4d9221"],
+                                            [1, "#276419"],
+                                        ],
+                                    },
+                                    xaxis: {
+                                        gridcolor: "white",
+                                        linecolor: "white",
+                                        ticks: "",
+                                        title: { standoff: 15 },
+                                        zerolinecolor: "white",
+                                        automargin: true,
+                                        zerolinewidth: 2,
+                                    },
+                                    yaxis: {
+                                        gridcolor: "white",
+                                        linecolor: "white",
+                                        ticks: "",
+                                        title: { standoff: 15 },
+                                        zerolinecolor: "white",
+                                        automargin: true,
+                                        zerolinewidth: 2,
+                                    },
+                                    scene: {
+                                        xaxis: {
+                                            backgroundcolor: "#E5ECF6",
+                                            gridcolor: "white",
+                                            linecolor: "white",
+                                            showbackground: true,
+                                            ticks: "",
+                                            zerolinecolor: "white",
+                                            gridwidth: 2,
+                                        },
+                                        yaxis: {
+                                            backgroundcolor: "#E5ECF6",
+                                            gridcolor: "white",
+                                            linecolor: "white",
+                                            showbackground: true,
+                                            ticks: "",
+                                            zerolinecolor: "white",
+                                            gridwidth: 2,
+                                        },
+                                        zaxis: {
+                                            backgroundcolor: "#E5ECF6",
+                                            gridcolor: "white",
+                                            linecolor: "white",
+                                            showbackground: true,
+                                            ticks: "",
+                                            zerolinecolor: "white",
+                                            gridwidth: 2,
+                                        },
+                                    },
+                                    shapedefaults: {
+                                        line: { color: "#2a3f5f" },
+                                    },
+                                    annotationdefaults: {
+                                        arrowcolor: "#2a3f5f",
+                                        arrowhead: 0,
+                                        arrowwidth: 1,
+                                    },
+                                    geo: {
+                                        bgcolor: "white",
+                                        landcolor: "#E5ECF6",
+                                        subunitcolor: "white",
+                                        showland: true,
+                                        showlakes: true,
+                                        lakecolor: "white",
+                                    },
+                                    title: { x: 0.05 },
+                                    mapbox: { style: "light" },
+                                },
+                            },
+                            legend: { tracegroupgap: 0 },
+                            title: {
+                                text: "Caldwell SLFRF Spending by Category",
+                            },
+                            margin: { t: 50, l: 0, r: 0, b: 0 },
+                        },
+                        { responsive: true },
+                    );
+                }
+            </script>
+        </div>
+        <div id="desc-panel">
+            <div id="desc-hint">
+                Tap a project segment to see its description.
+            </div>
+            <div id="desc-content">
+                <p id="desc-title"></p>
+                <p id="desc-body"></p>
+            </div>
+        </div>
+        <script>
+            var descriptions = {
+                "ITD Project: Lake Lowell Pathway":
+                    "Adding to an ITD Project to add Middleton Road Along SH 55. This is part of an ITD Project (SH-55) Pre-Construction and engineering for an ITD project that will be taking place already through ITD. The provided route needed walking paths for the community to support the users through construction of public green settings, walkways, grading, and paving.",
+                "PUBLIC SAFETY TRAINING FACILITY":
+                    "The funds will be used to purchase an existing commercial building to be utilized as a training facility for the City of Caldwell Police and Fire Departments. This commercial building would be comprised of eight (8) FEMA modules.",
+                "Police Worn Cameras":
+                    "Upgrade the current body warn camera system for the Caldwell Police Department to increase the ability to store sensitive case information related to body warn camera footage, increasing the reliability and creditability of public record requests and case details.",
+                "Fire-SCBA":
+                    "The purchase of new Self Contained Breathing Apparatus for the Caldwell Fire Department to improve their emergency responses with increased survivability. These units will allow the Caldwell Fire Department to better communicate with emergency dispatch and on-scene commanders.",
+                "Fire-Radios":
+                    "The Fire Department will use these funds to purchase new communications/radio equipment.",
+                "Police Rescue Vehicle":
+                    "Public Safety Department needs a departmental vehicle to support operations. Business retention and business attraction tool to support high-risk situations including crime scene evacuation resulting in greater efficiency and effectiveness in policing.",
+                "Fire Squad Unit":
+                    "Funds will be used to purchase a Ford F550 BME Squad. This vehicle will replace a 2007 that has reached end of life. This will save the city in costly repairs due to wear and tear.",
+                "Police-License Plate Reader Cameras":
+                    "License Plate Reader Cameras for Police officers-LPR Cameras will improve police efficiency, enhance investigation capabilities, deter crime and keep officers and community safe.",
+                "Fire Response Squad":
+                    "Fire Response squad unit 5 unit will be used for utility purposes (non-emergency) and provide logistical support to the department as well as support the logistical needs of the department on large incidents.",
+                "Fire-Knox System":
+                    "The 5 Knox system upgrade will provide additional security to city buildings as well as streamlined access to first responders responding to emergencies.",
+                "Police-Radios":
+                    "The purchase of the new Motorola mobile and portable radios will provide additional equipment for increased reporting capabilities.",
+                "CEC Upgrades / Disaster Recovery Center":
+                    "The funds will be used to renovate the Event Center (CEC) within canyon county is a public nonprofit organization that has been included in the Counties Emergency Operations Plan as the official Shelter facility. Caldwell has a MOU with Southwest District Health for use of the CEC as a COVID-19 Drive-Thru testing and vaccination site and in the event of a public health emergency. It is the county's goal to renovate the facility so it is capable of being used during any natural disaster as well as provide an overflow facility that is not expected to be needed in the near future due to the current increase in COVID-19 cases.",
+                "Paid Sick and Medical Leave Program":
+                    "Paid Sick and Medical Leave Program",
+                "Library Kiosk":
+                    "Our target audience is low income community members who cannot regularly get to the library without transportation and do not have access to a computer and/or internet. These individuals will benefit directly from our project. Our goal is that this will strengthen our communities and provide services that would otherwise not be available or not easily available to residents in our city. The intent of this program is to assist and strengthen our community by providing a much needed service to the underserved population, making our community stronger for the future.",
+                "City Comp Plan":
+                    "The project is to update the city\\u2019s comprehensive plan. This resulting document will assist residents, business owners, developers, designers, consultants, local and state agencies, city staff, city board and commissions, and many other stakeholders. The document will \\nprovide guidance, goals, objectives, and action items for regulating public policies on growth and development, land use, natural resources, public services and facilities, utilities, recreation, housing, transportation, community design, agriculture, and public airport facilities.",
+                "Police Software":
+                    "These funds will be used to purchase a powerful integration software platform designed to help police agencies streamline operations by consolidation the various systems they rely on, resulting in greater efficiency and effectiveness. This will Enhance data processing and centralize data management with a user-friendly application, overall creating efficiencies within the department.",
+                "Telephone Alert System":
+                    "Upgrade City Wide Telephone System to include New Alert System",
+                "Fire ESCI":
+                    "Consulting is an emergency service consultant. Funds will be used to identify current and expanded fire services needs throughout the department as well as assess the community for future fire service needs and will provide data on what to focus on when it comes to training requirements.",
+                "Fire Training Vehicle":
+                    "The Fire Department will use these funds to purchase and outfit a Fire Training Vehicle",
+                "Fire Logistics Vehcile":
+                    "Funds to be used to purchase a Chevrolet Suburban for the Logistics Division within the department. This vehicle will be used for utility purposes (non-emergency) and support the logistical needs of the department.",
+                "Police Drones":
+                    "Funds will be used to purchase drones to enhance the safety and improve efficiency. These drones will serve as a valuable tool to patrol officers, SWAT teams, and K9 units. The drones will also serve as a valuable business retention and business attraction tool to support high-risk situations including crime scene evacuation resulting in greater efficiency and effectiveness in policing.",
+                "Economic Development Vehicle":
+                    "Our target audience is low-income community members and small business owners who are without transportation and do not have access to an automobile. Utilizing a vehicle for outreach will benefit directly from our project. Our goal is to ensure all residents have equitable access to city services. Currently many of our clients are in the low-income population, making our community stronger for all residents.",
+                "ADMINISTRATIVE EXPENSES":
+                    "Administrative Costs including but not limited to Applications of SLRF funds, Consulting in additional admin expenses, legal fees/costs, accounting, human resources and other administrative costs needed to properly administer and report on SLFRF funds.",
+                "Training Facility Mats":
+                    "Purchase of training mat for Arrest and Control Training room to teach defensive tactics for officers safety.",
+                "Public Sector Staffing Needs":
+                    "Throughout the pandemic the city has identified additional\\nwages paid above and beyond their standard wages to\\nmaintain an adequate work force. The increase in sick leave\\ndue to COVID has, at times, depleted the needed work force\\nin certain departments. Many staff have had to work\\novertime and/or take on additional duties due to short\\nstaffing related to COVID illnesses. These funds will be\\nused to pay for the additional overtime and pay to retain\\nneeded staffing levels throughout the pandemic. This may\\ninclude, but is not limited to, hiring of personnel, increased\\npay or overtime for existing personnel, or any employees\\ntime specifically dedicated to responding to COVID-19.",
+                "Personal Protective Equip Materials and Supplies":
+                    "Procurement of PPE for City staff to decrease the spread of COVID19 within the city personnel and the community as a whole.",
+                "Incentive Pay (Fire)":
+                    "The employees of the Caldwell Fire Department and Caldwell Police Department will receive additional incentive pay which will help maintain City of Caldwell employees in crucial positions. This will encompass a 15% across the departments increase.",
+                "Incentive Pay (Police)":
+                    "The employees of the Caldwell Fire Department and Caldwell Police Department will receive additional incentive pay which will help maintain City of Caldwell employees in crucial positions. This will encompass a 15% across the departments increase.",
+            };
+            var chart = document.getElementById("sunburst-chart");
+            chart.on("plotly_click", function (data) {
+                var label = data.points[0].label;
+                var desc = descriptions[label];
+                if (desc) {
+                    document.getElementById("desc-hint").style.display = "none";
+                    document.getElementById("desc-content").style.display =
+                        "block";
+                    document.getElementById("desc-title").textContent = label;
+                    document.getElementById("desc-body").textContent = desc;
+                } else {
+                    document.getElementById("desc-hint").style.display =
+                        "block";
+                    document.getElementById("desc-content").style.display =
+                        "none";
+                }
+            });
+        </script>
+    </body>
+</html>
