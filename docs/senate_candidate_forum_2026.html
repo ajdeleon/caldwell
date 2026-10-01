@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Idaho U.S. Senate Candidate Forum — Sept. 30, 2026</title>
+<meta name="description" content="Every question from the Sept. 30, 2026 Idaho U.S. Senate candidate forum in Caldwell, with summaries, full answers, and links to each answer on YouTube.">
+<meta property="og:title" content="Idaho U.S. Senate Candidate Forum — Sept. 30, 2026">
+<meta property="og:description" content="Read and watch how Todd Achilles, Natalie Fleming and Matt Loesby answered each question at the Caldwell candidate forum.">
+<meta property="og:type" content="website">
+<style>
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+       background: #f0f2f5; color: #2c3e50; line-height: 1.55; }
+a { color: inherit; }
+
+:root {
+  --achilles: #0f766e;
+  --fleming:  #b45309;
+  --loesby:   #6d28d9;
+  --muted: #64748b;
+  --border: #e2e8f0;
+}
+
+/* ── Header ── */
+header {
+  position: sticky; top: 0; z-index: 100;
+  background: #2c3e50; color: white;
+  padding: 12px 24px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+.header-top { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; margin-bottom: 8px; }
+header h1 { font-size: 1.2rem; font-weight: 700; }
+header .subtitle { font-size: 0.8rem; opacity: 0.7; }
+.header-controls { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+header input {
+  flex: 1; min-width: 180px; max-width: 320px;
+  padding: 6px 14px; border-radius: 20px; border: none;
+  font-size: 0.875rem; outline: none; background: rgba(255,255,255,0.15); color: white;
+}
+header input::placeholder { color: rgba(255,255,255,0.55); }
+header input:focus { background: rgba(255,255,255,0.25); }
+.chips { display: flex; gap: 6px; flex-wrap: wrap; }
+.chip {
+  border: 1px solid rgba(255,255,255,0.35); background: transparent; color: white;
+  border-radius: 20px; padding: 4px 12px; font-size: 0.8rem; cursor: pointer;
+  display: inline-flex; align-items: center; gap: 6px;
+}
+.chip[aria-pressed="true"] { background: white; color: #2c3e50; border-color: white; }
+.chip .dot { width: 9px; height: 9px; border-radius: 50%; }
+#count { font-size: 0.8rem; opacity: 0.7; white-space: nowrap; }
+
+main { max-width: 1180px; margin: 0 auto; padding: 0 24px 48px; }
+
+/* ── Intro ── */
+.sponsors {
+  background: white; border: 1px solid var(--border); border-radius: 10px;
+  margin-top: 20px; padding: 16px 20px; text-align: center;
+}
+.sponsors .label { font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+.sponsor-list { display: flex; justify-content: center; flex-wrap: wrap; gap: 6px 22px; margin-top: 6px; }
+.sponsor-list a { font-weight: 700; font-size: 1.02rem; text-decoration: none; }
+.sponsor-list a:hover { text-decoration: underline; }
+.sponsor-list .co { font-weight: 500; font-size: 0.9rem; color: var(--muted); }
+.event-meta { font-size: 0.85rem; color: var(--muted); margin-top: 8px; }
+
+.intro-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 16px; }
+@media (max-width: 820px) { .intro-grid { grid-template-columns: 1fr; } }
+.panel { background: white; border: 1px solid var(--border); border-radius: 10px; padding: 16px 20px; }
+.panel h2 { font-size: 0.95rem; margin-bottom: 10px; }
+.panel p { font-size: 0.88rem; color: #4a5568; }
+.panel p + p { margin-top: 8px; }
+
+.candidates { display: grid; gap: 8px; }
+.cand { display: flex; align-items: center; gap: 10px; font-size: 0.9rem; }
+.cand .bar { width: 4px; align-self: stretch; border-radius: 2px; }
+.cand .name { font-weight: 700; }
+.cand .party { color: var(--muted); font-size: 0.8rem; }
+.cand .site { margin-left: auto; font-size: 0.8rem; white-space: nowrap; }
+.cand.absent { opacity: 0.75; }
+.cand.absent .name { font-weight: 600; }
+
+/* ── Table of contents ── */
+.toc { margin-top: 16px; }
+.toc ol { list-style: none; display: flex; flex-wrap: wrap; gap: 6px; }
+.toc a {
+  display: inline-block; text-decoration: none; font-size: 0.82rem;
+  background: #eef2f7; border-radius: 6px; padding: 4px 10px;
+}
+.toc a:hover { background: #dfe6ef; }
+.toc .fu a { background: transparent; border: 1px dashed #cbd5e1; }
+
+/* ── Question cards ── */
+.q {
+  background: white; border: 1px solid var(--border); border-radius: 10px;
+  margin-top: 20px; overflow: hidden; scroll-margin-top: var(--hdr, 110px);
+}
+.q.follow-up { margin-top: 10px; border-left: 4px solid #cbd5e1; }
+.q-head { padding: 16px 20px 14px; border-bottom: 1px solid var(--border); }
+.q-topic { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.q-topic h2 { font-size: 1.1rem; }
+.q-topic .anchor { text-decoration: none; color: #94a3b8; font-size: 0.9rem; }
+.q-topic .anchor:hover { color: #2c3e50; }
+.badge { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.05em;
+         background: #eef2f7; color: var(--muted); border-radius: 4px; padding: 1px 6px; }
+.q-context { font-size: 0.85rem; color: var(--muted); margin-top: 8px; max-width: 860px; }
+.q-text { font-size: 0.98rem; font-weight: 600; margin-top: 8px; max-width: 860px; }
+
+.watch {
+  display: inline-flex; align-items: center; gap: 5px; white-space: nowrap;
+  font-size: 0.8rem; font-weight: 600; text-decoration: none;
+  color: #b91c1c; background: #fef2f2; border-radius: 14px; padding: 2px 10px;
+}
+.watch:hover { background: #fee2e2; }
+.watch svg { width: 10px; height: 10px; fill: currentColor; }
+.q-head .watch { margin-top: 10px; }
+
+.answers { display: grid; grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 960px) { .answers { grid-template-columns: 1fr; } }
+.ans { padding: 14px 20px 16px; border-top: 3px solid var(--c); }
+.answers .ans + .ans { border-left: 1px solid var(--border); }
+@media (max-width: 960px) { .answers .ans + .ans { border-left: none; } }
+.ans-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; flex-wrap: wrap; }
+.ans-name { font-weight: 700; color: var(--c); }
+.ans-order { font-size: 0.72rem; color: var(--muted); font-weight: 500; margin-left: 4px; }
+.ans-summary { font-size: 0.9rem; margin-top: 8px; }
+details { margin-top: 10px; }
+summary { cursor: pointer; font-size: 0.8rem; color: var(--muted); user-select: none; }
+summary:hover { color: #2c3e50; }
+.full { font-size: 0.86rem; color: #374151; margin-top: 8px; padding-left: 12px; border-left: 2px solid #e5e7eb; }
+mark { background: #fde68a; color: inherit; border-radius: 2px; }
+
+/* ── Lightning round ── */
+.lightning { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+.lightning th, .lightning td { padding: 10px 14px; text-align: left; vertical-align: top; border-top: 1px solid var(--border); }
+.lightning thead th { border-top: none; font-size: 0.85rem; color: var(--c); border-bottom: 3px solid var(--c); }
+.lightning tbody th { font-weight: 600; width: 28%; }
+.lightning .short { font-weight: 600; }
+.lightning .quote { color: var(--muted); font-size: 0.8rem; margin: 2px 0 6px; }
+@media (max-width: 760px) {
+  .lightning thead { display: none; }
+  .lightning, .lightning tbody, .lightning tr, .lightning th, .lightning td { display: block; width: auto; }
+  .lightning tbody th { width: auto; border-top: 2px solid var(--border); background: #f8fafc; }
+  .lightning td { border-top: none; border-left: 3px solid var(--c); margin: 6px 14px; padding: 4px 10px; }
+  .lightning td::before { content: attr(data-name); display: block; font-weight: 700; color: var(--c); font-size: 0.8rem; }
+}
+
+.hidden { display: none !important; }
+#empty { text-align: center; color: var(--muted); padding: 40px 0; }
+
+footer { max-width: 1180px; margin: 0 auto; padding: 0 24px 40px; font-size: 0.8rem; color: var(--muted); }
+footer p + p { margin-top: 6px; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-top">
+    <h1>Idaho U.S. Senate Candidate Forum</h1>
+    <span class="subtitle" id="subtitle"></span>
+  </div>
+  <div class="header-controls">
+    <input id="search" type="search" placeholder="Search questions and answers…" aria-label="Search questions and answers">
+    <div class="chips" id="filters" role="group" aria-label="Show candidates"></div>
+    <span id="count"></span>
+  </div>
+</header>
+
+<main>
+  <section class="sponsors" aria-label="Forum sponsors">
+    <div class="label">Presented by</div>
+    <div class="sponsor-list" id="sponsors"></div>
+    <div class="event-meta" id="event-meta"></div>
+  </section>
+
+  <div class="intro-grid">
+    <section class="panel">
+      <h2>Candidates</h2>
+      <div class="candidates" id="candidates"></div>
+    </section>
+    <section class="panel">
+      <h2>How to use this page</h2>
+      <p>Each card shows a question from the forum, a short neutral summary of every candidate's answer, and the full answer as spoken. Click <strong>▶ Watch</strong> to open the video on YouTube at the moment that answer begins.</p>
+      <p>Use the search box to find a topic, or the candidate buttons to show only certain candidates. Answers appear in the order candidates spoke.</p>
+      <p id="intro-links"></p>
+    </section>
+  </div>
+
+  <nav class="panel toc" aria-label="Questions">
+    <h2>Questions</h2>
+    <ol id="toc"></ol>
+  </nav>
+
+  <div id="questions"></div>
+  <div id="empty" class="hidden">No questions or answers match your search.</div>
+</main>
+
+<footer id="footer"></footer>
+
+<!-- Generated by forum/build_senate_forum.py: edit the script, not this data block -->
+<script type="application/json" id="forum-data">{
+ "event": {
+  "title": "U.S. Senate Candidate Forum",
+  "race": "Idaho — U.S. Senate, 2026",
+  "date": "2026-09-30",
+  "date_label": "September 30, 2026",
+  "location": "Caldwell City Hall, Caldwell, Idaho",
+  "youtube_id": "12DyOv_H4ns",
+  "election_label": "Election Day: November 3, 2026",
+  "moderators": [
+   {
+    "name": "McKay Cunningham",
+    "role": "Director, Master of Applied Public Policy, College of Idaho"
+   },
+   {
+    "name": "Latonia Haney Keith",
+    "role": "Dean of Graduate Studies & Chief Strategy Officer, College of Idaho"
+   }
+  ],
+  "sponsors": [
+   {
+    "name": "League of Women Voters of Idaho",
+    "url": "https://www.lwvid.org/"
+   },
+   {
+    "name": "Caldwell Chamber of Commerce",
+    "url": "https://www.caldwellchamber.org/"
+   },
+   {
+    "name": "College of Idaho",
+    "url": "https://www.collegeofidaho.edu/"
+   },
+   {
+    "name": "AAUW Idaho",
+    "url": "https://aauw-id.aauw.net/",
+    "role": "co-sponsor"
+   }
+  ],
+  "segments": [
+   {
+    "label": "Welcome & sponsors",
+    "start": 290
+   },
+   {
+    "label": "Forum rules",
+    "start": 416
+   },
+   {
+    "label": "Moderator introductions",
+    "start": 730
+   }
+  ]
+ },
+ "candidates": [
+  {
+   "id": "achilles",
+   "name": "Todd Achilles",
+   "party": "Independent",
+   "url": "https://www.achillesforidaho.com/"
+  },
+  {
+   "id": "fleming",
+   "name": "Natalie Fleming",
+   "party": "Independent",
+   "url": "https://nataliefleming.info/"
+  },
+  {
+   "id": "loesby",
+   "name": "Matt Loesby",
+   "party": "Libertarian",
+   "url": "https://www.loesby.us/"
+  }
+ ],
+ "absent": [
+  {
+   "name": "Jim Risch",
+   "party": "Republican (incumbent)",
+   "url": "https://senatorrisch.com/",
+   "note": "Invited; declined to participate.",
+   "start": 376
+  }
+ ],
+ "questions": [
+  {
+   "id": "tariffs",
+   "topic": "Cost of living & tariffs",
+   "context": "Canada is Idaho's biggest customer, buying about $1.8 billion in Idaho goods in 2025 — roughly two-thirds of the state's exports. After U.S. tariffs of up to 50% on some Canadian goods took effect in August, Canada announced counter-tariffs.",
+   "question": "What specific step would you take in the Senate to lower everyday costs for Idaho families, and should today's tariffs be kept, expanded, or rolled back?",
+   "answers": [
+    {
+     "candidate": "achilles",
+     "start": 902,
+     "summary": "Calls tariffs a tax paid by buyers that should be used only strategically (e.g., steel, cars, semiconductors). Says the trade war with Canada erased Idaho's trade surplus; would roll tariffs back and have Congress reclaim tariff authority from the White House.",
+     "text": "Great. Well, first of all, thank you, Travis and the Chamber of Commerce for putting this on, Jean and the League of Women Voters, Mary and AUW and McKay and Latonya. I appreciate the opportunity to be here. Tariffs are taxed. They are paid by the buyer. They should be used only in really strategic purposes when you're trying to build an industry or protect something strategic like steelmaking or carmaking or semiconductors. You know, the trade war we've got with Canada right now really doesn't benefit anybody. It's costing Idaho producers. So as you said, McKay, it's $1.8 billion is the trade we have with Canada, by far Idaho's number one trade partner. We actually had a surplus of $77 million. That's gone now. So we've lost that opportunity to make some money off of the trade with Canada. We need to roll back these tariffs. And the number one thing as Idaho's next senator, tariffs are the duty of Congress. It's not the White House. And Congress needs to stand up and be an independent branch of government and execute their constitutional duties, which is to be in control of tariffs. So when I'm in the Senate, that's what we'll do, roll the tariffs back, take back control of it from the White House, and we'll manage tariffs in a more strategic way than what's being done right now."
+    },
+    {
+     "candidate": "loesby",
+     "start": 986,
+     "summary": "Says fuel costs from the Iran war and other foreign-policy decisions raise living costs more than tariffs do; calls for ending foreign wars and deporting millions of people to ease competition for housing. Sees tariffs as a tool to bring back manufacturing, but says the current ones should be rolled back for a better strategy.",
+     "text": "Well, first off, thank you all for coming out here and for coming to hear us speak to you about these issues. I'm sure that sometimes we'll be repeating each other sometimes we'll be contradicting each other and I hope that you enjoy both. So one thing I will repeat that Mr. Achilles said, tariffs are indeed a tax. So are the taxes we pay on our incomes, on our purchases of groceries, on many of your retirement incomes. Everything in our lives is taxed right now. And while tariffs have had some impact on the cost of living, far greater impact on the cost of living right now is the cost of fuel that is the result of the war in Iran and of many other terrible foreign policy decisions taken by the Trump administration and the Biden administration. So if we want to actually address serious cost of living issues, first we need to end all of these horrific foreign wars that are getting American soldiers killed causing chaos around the world and destroying shipping lanes through such as the Strait of Hormuz and Bab al-Mandeb. The other thing we need to do in order to address cost of living is deport millions of people who should not be in this country. Housing is one of the biggest costs that people face. When there are more people in this country than should be here because they have not been invited here by the American people, that means that we are competing with them for housing, whether that be for rent or for purchase. So if we want to address cost of living, we need deportations, not fiddling with tariffs. Now the purpose of tariffs is to try to address potential imbalances in how our manufacturing and our domestic production measures up against foreign countries. Right now, China is a manufacturing powerhouse because the United States has exported manufacturing to them. We need to reverse that and tariffs are going to be part of that story. That does not mean that the Trump administration has been doing it strategically or well. So while I think that tariffs of any tax are probably the least offensive because tariffs are likely to incentivize domestic production, the ones in place right now need to be rolled back and a better strategy needs to be implemented where we focus particularly on returning manufacturing to America. Thank you."
+    },
+    {
+     "candidate": "fleming",
+     "start": 1123,
+     "summary": "Criticizes the current tariffs and the conflict with Canada, calling Canada an ally. Names housing as her top affordability priority, citing large corporations buying mobile-home parks and raising lot rents, and calls for streamlining immigration for the workers who build homes and grow food.",
+     "text": "Hi, I'm Natalie Fleming. I am so grateful that you welcomed us here tonight. And as we're all looking forward to the day that Citizens United is overturned and equalizing access for candidates to the voters, it's very important. Not everybody has all the money and we still have some good ideas and some great things that we can put forward. First of all, on the tariffs right now, what is happening is absolutely ridiculous. And the current administration has been preying on the lack of understanding of how tariffs work. For example, Canada, in order to protect their butter, they have an emergency butter tariff that if we reach a certain high scale of if we try to flood Canada with butter, then a certain tariff cuts in. And that's only that's never happened before. But they use that emergency tariff as claiming that, you know, butter was at a 250 percent tariff rating. So they use a lot of confusion to promote the idea. And it's so absurd that we now look at Canada as a foe and they are our friends and they're our allies. And, of course, we know them as the kindest people ever. They took our people in during 9-11. We love Canada. And so this conflict with Canada is mind boggling. And so as far as the cost of living goes, I look at the cost of housing to begin with, because everything after that, people can't afford to live after paying rent. I talked to people in trailer parks where they own the trailer and then the mobile home park was owned by a small company. Then their rent on the lot was only three hundred eighty dollars a month. And then it was purchased by massive corporations, a three hundred and something billion dollar corporation and jack the rents up after people pay their rent or pay their mortgage. They really don't have anything left. So Social Security, everything goes back to that. So for me, my passion project on making things affordable is housing. And we all know that we have some wonderful immigrants who are building our homes and are providing food for us. And so we need to streamline the immigration process for them."
+    }
+   ],
+   "start": 849
+  },
+  {
+   "id": "money-in-politics",
+   "topic": "Money in politics",
+   "context": "In this year's May primaries, political action committees spent more than $4.2 million backing Republican candidates. This spring the Idaho Legislature, with bipartisan support, asked Congress to propose a constitutional amendment restoring the power of Congress and the states to set rules on election spending.",
+   "question": "What would you do in the Senate about outside and undisclosed money in our elections, and would you vote for the kind of constitutional amendment Idaho's Legislature has asked for?",
+   "answers": [
+    {
+     "candidate": "loesby",
+     "start": 1299,
+     "summary": "Opposes campaign finance laws generally, saying they burden low-budget campaigns without showing who influences politicians. Calls Citizens United correctly decided on free-speech grounds; says the fix is shrinking federal power — including overturning Wickard v. Filburn — not a constitutional amendment.",
+     "text": "Thank you for the question. So campaign finance is an annoying topic to me, partly because, as mentioned, you know, for those of us who don't get a lot of donations, it's a lot of paperwork that doesn't really give you guys any more information about what is actually going on in politics. It just adds an additional burden for people with lower resource campaigns. Most campaign finance law does not improve your ability to understand who owns your politicians. It only makes it harder to challenge them. So generally speaking, I oppose campaign finance laws in general. It's also just important to recognize that no matter what legal structures and restrictions are put in place, people with a lot of resources and a lot at stake in politics, people who are looking at billions of dollars in revenue one way or another, they are going to find a way around any of these restrictions. You know, Citizens United, frankly, is the correct decision because it's about free speech and free association. The problem is that the Congress exercises so much power that there is so much to buy. And so, yes, you will see many corporations and interest groups purchasing politicians, sometimes for $50,000, sometimes for $30 million, in the case of Ed Gallrein in Kentucky. And that's going to happen as long as the federal government exercises as much power as it does. The answer is that we need to stop it exercising that much power by getting it out of the economy, getting it out of people's lives. The thing we need to do in order to fix our elections is not pass another constitutional amendment. It is to undo the 1942 Supreme Court decision, Wickard v. Filburn, on which almost all economic laws in the U.S. rest. So that is what we need to do to fix our elections, not try to fiddle around the edges with campaign reporting laws. Thank you."
+    },
+    {
+     "candidate": "fleming",
+     "start": 1416,
+     "summary": "Says her own analysis of FEC data as a data scientist showed money being funneled through county and state parties on both sides. Supports stronger laws against dark money and limits on campaign spending by individuals.",
+     "text": "Thank you. It was about 2013 or 2014 when I went down that dark, when I went down the rabbit hole. I'm a data scientist and I downloaded the FEC files and I looked at the numbers going back and forth and the manipulations between the parties. It was where I was heartbroken because as a lifelong conservative Republican, I saw corruption within my party and the other party and seeing that we were all just being played. And I've spoken to some wealthy donors who say, oh, I donated a million dollars to this candidate and that candidate. Well, the limit is not one million dollars. So we do definitely need to get rid of the dark money manipulations. There's a lot of times the county, the county parties and the state parties are really used to funnel money from one candidate to the other. I guess I would call it money laundering, just in the sense that you donate to your local, you donate to your local county and then it goes to the state and then the national party takes over the money. And they just feel it. What I saw was frightening. So, yes, we do need to increase the laws to get rid of the dark money. And we can't have people like Elon Musk buying entire elections with their propaganda. And I understand the free speech ruling by the Supreme Court, but we do need to limit campaign spending by specific individuals and get rid of the dark money."
+    },
+    {
+     "candidate": "achilles",
+     "start": 1502,
+     "summary": "Supports the intent of the amendment (would need to see its text) and overturning Citizens United, focusing on dark-money groups. Says he is the only candidate in the race who has filed FEC reports and Senate financial disclosures; points to Montana and Hawaii redefining corporations' election powers as a model for Idaho.",
+     "text": "Going back to your question, I mean, I can't say how I would vote on a potential constitutional amendment, obviously, without seeing it. But I think the intent is exactly what we need. We've got to get the money out of our elections, particularly these dark money groups that just pop up, drop a couple million dollars and then disappear. I do support overturning Citizens United. I think it's critically important. I don't think it operates around the edges. I think it's the core of a lot of the problems that we have right now, particularly the dark money groups. You know, I will say complying with FEC law is hard, but it's the law and you need to do those filings. I'm the only candidate in this race who's actually done those filings. I'm the only candidate in this race who's actually done the Senate personal financial disclosure statements, which is also a requirement for anybody running for the Senate. You know, I think the fundamental problem here is that there is too much money in the system and both of the political parties benefit from the amount of money in the system. And, you know, I'm running as an independent to be able to break that grip of the two-party system and bring reform. I will say there is, you know, since it started with the Idaho legislature, there are some interesting things that state legislatures can do here. You're seeing it up in Montana right now since the definition of a corporation is really at state level, not federal level. States like Montana and Hawaii are redefining what a corporation can and can't do. And we're moving the ability of corporations to participate in elections. I think that's super smart. They're doing it as a citizens initiative in Montana this year. I think that would be a great opportunity for Idaho to do something similar in the next cycle."
+    }
+   ],
+   "start": 1245
+  },
+  {
+   "id": "public-financing",
+   "topic": "Publicly funded campaigns",
+   "follow_up": true,
+   "question": "Are you in support of publicly funded campaigns? (One minute each.)",
+   "answers": [
+    {
+     "candidate": "loesby",
+     "start": 1615,
+     "summary": "Opposes. Says it shouldn't be easy to file paperwork and receive tens of thousands of public dollars to campaign.",
+     "text": "I am not in support of publicly funded campaigns. And the reason is because even though it would be a tiny amount of money compared to what the government is spending already, it shouldn't be easy for me to file a bit of paperwork and get tens of thousands of dollars from the states to go around the state trying to convince you to vote for me. I don't get a lot of donations and I don't ask for a lot of donations because I understand the dynamics of this race. I don't want money wasted on this race that shouldn't be."
+    },
+    {
+     "candidate": "fleming",
+     "start": 1645,
+     "summary": "Undecided. Says events like this forum and new technology can help level the field without public money.",
+     "text": "I've thought of that before and I haven't come to an honest answer on it. But I think that there's a lot of things that we can do to equalize the elections. Events like this tonight, the League of Women Voters allowing all the candidates to present themselves. As technology increases, our ability and our resources as individual candidates, even without a lot of money, we do have a lot of resources to promote our campaigns. And I think that's the path for the path forward. We always look to the law to the law to make the rule to do all the good things. But sometimes good things can be done by just actions by individuals and the choices that we make. So as communities, we can choose to equalize the elections by events like this tonight. But as far as publicly funded elections, I've thought about it and I haven't gone in depth into it enough to really give you an honest answer as to what I think would be most effective for that."
+    },
+    {
+     "candidate": "achilles",
+     "start": 1716,
+     "summary": "Sees merit in narrowing the gap between candidates. Says the absent incumbent has raised over $4 million, mostly from outside Idaho, while his own campaign has raised about $1.7 million without party funding.",
+     "text": "You know, there's lots of different proposals for how to do public funding. I think there's merit in it in terms of lowering the gap between candidates. You know, the one person who hasn't showed up today has raised at least as of the last FEC report over four million dollars for this campaign. I think only about 10 percent of that came from Idaho. And it's hard for those of us running in Idaho to be able to compete with that. You know, we just closed out our quarter today and we've raised over one million dollars in just this three month period. About one point seven million dollars all in on the campaign. You know, we've done that without being connected to either of the big funding party funding mechanisms. You know, we've done it as an independent candidate would. But it's hard. Right. And it takes a lot of time and a lot of effort. And if we can if we can eliminate the ability of people like Jim Risch to be able to start this campaign with several million dollars in the bank, then I think that levels up playing field. And that's better for our democracy."
+    }
+   ],
+   "start": 1604
+  },
+  {
+   "id": "national-security",
+   "topic": "National security & war powers",
+   "context": "The Constitution gives Congress the power to declare war, but presidents of both parties have sent U.S. forces into combat without a declaration. In January a U.S. operation captured Venezuela's president; on February 28 the U.S. and Israel began striking Iran. In June both chambers of Congress passed a resolution directing the president to end hostilities with Iran — the first time since the War Powers Act became law in 1973.",
+   "question": "What do you see as the greatest threat to America's security, and when should the United States use military force — including what role the Senate should play in that decision?",
+   "answers": [
+    {
+     "candidate": "fleming",
+     "start": 1838,
+     "summary": "Sees internal division, fueled by foreign propaganda, as the greatest threat. Supports the Defend the Guard bill (no overseas Guard deployments without a declaration of war), calls the Iran war unnecessary, criticizes Defense Secretary Hegseth, and says Congress must reassert its role. Describes what is happening in Israel's conflict as genocide.",
+     "text": "I agree with Dan McKnight, who's working on the Defend the Guard bill to where the states would have basically that we can't send the guard overseas without the Congress officially declaring war. The greatest threat to national security, I believe, is internal and the conflict within and the increasing divide between us and how we're being provoked to hostilities to each other. And America is an incredible nation. And the only way that we can be conquered is within from within. And that's why foreign governments such as China and Russia and North Korea over the years have spent a lot of money on feeding propaganda within the United States to turn us against each other. So I think that's internally is the greatest threat that we have. But as far as the well, some people call it the Epstein War. But as far as these wars overseas where we just escalating conflict and we Pete Hegseth, incidentally, I went to Moscow High School. So right now we have the pastor up there who is influencing Pete Hegseth and how he is just embracing conflict and violence and changed the Department of Defense to the Department of War and that we have become the aggressors overseas. So it is Congress's role to stop this. And they're just kind of a lame duck. Congress not doing anything to stop any of this. And the war with Iran is unnecessary. What Israel has done previously, there are things I supported about Israel. But right now, the genocide that is happening and that has happened is absolutely horrific. So yeah, Congress needs to do its job."
+    },
+    {
+     "candidate": "achilles",
+     "start": 1957,
+     "summary": "Agrees the biggest threat is internal: corruption, partisanship and senators not doing their constitutional duty. Drawing on two Persian Gulf deployments, faults Sen. Risch as Foreign Relations chair for holding no hearings on Venezuela, Caribbean boat strikes or the Iran war.",
+     "text": "So I think the greatest threat to our national security, and I agree with Natalie on this, it's what's happening internally. It's the corruption, it's the partisanship. It's senators who refuse to do their constitutional duties. You know, that's what's weakening this country in terms of when do we engage in foreign conflict and push our troops overseas? You know, I served on active duty in the 90s. I deployed twice to the Persian Gulf. I know what it's like to stand in front of your 86 troops when you're about to deploy into something that everybody thinks is going to be a shooting war. It's an incredibly intense experience and you have an obligation to keep your troops safe and accomplish your mission. And you also hope your chain of command knows what they're doing. That's on both the civilian side and the military side. What we're seeing right now is we've got the worst secretary of defense in the history of the of the position that is putting everything, our national security at risk. But at the same time, Congress isn't engaging their constitutional responsibilities in terms of where we're deploying our troops. Nobody more so than Jim Risch, who's chair of the Senate Foreign Relations Committee. He's held zero hearings on Venezuela, zero hearings on these illegal destruction of boats in the Caribbean and zero hearings on the Iran war. You know, his duty, his constitutional duty is to be that check on the White House. You can read it in the Federalist Papers. He's the third most important person on foreign affairs. He's absolutely derelict in his duties there. And he's putting the five thousand Idahoans on active duty at risk. And he's putting the national security of this country at risk."
+    },
+    {
+     "candidate": "loesby",
+     "start": 2063,
+     "summary": "Says the greatest threat is tens of millions of people in the U.S. whose primary loyalty is to another country, and calls for sending them home. Would defund foreign bases to bring troops home, and says the president should be impeached for sending troops to fight for other countries.",
+     "text": "Well, the biggest threat to our national security is the tens of millions of people in the United States already whose primary national loyalty is not to America, but it is to a foreign country. For example, approximately one in four Mexican people on Earth lives in the United States. This is just one example. For example, there are many other countries where they have millions of their people living in America, advocating for their people's interests, sending money back to their country and ready to take up their own flag. And for example, riot with a Mexican flag in Californian or Texan cities when they are angry about some amount of deportations or even just if someone gets hurt while being arrested for a crime. So the thing that needs to be done in order to correct this is to send them back home. And that would take military operations, which we don't have the troops to do right now because they're busy overseas. So Congress's role in correcting this situation is that Congress needs to defund all of our foreign bases and say, yes, we will pay our troops to come home and secure the homeland because that is what they signed up to do. They signed up to defend Americans, not to do whatever Bibi Netanyahu thinks will be in Israel's interests this week. So Congress needs to say, all right, if you want to keep if you want to keep sending our troops to die overseas for foreign governments, you're not getting any money. And in fact, we need to impeach the president and remove him for treason for sending American troops to die for other countries."
+    }
+   ],
+   "start": 1773
+  },
+  {
+   "id": "ukraine",
+   "topic": "Ukraine",
+   "follow_up": true,
+   "context": "More than four years into Russia's full-scale invasion of Ukraine, U.S.-mediated talks still haven't produced a ceasefire.",
+   "question": "What should U.S. policy toward Ukraine be — continued military aid, pressure on Kyiv to accept a deal, tougher sanctions on Russia, or something else?",
+   "answers": [
+    {
+     "candidate": "fleming",
+     "start": 2199,
+     "summary": "Supports Ukraine and sanctions on Russia, noting Ukraine gave up its nuclear weapons in exchange for security commitments. Raises concerns about depleted-uranium munitions and warns against entering the AI era with a \"war mindset.\"",
+     "text": "Well, definitely I do support Ukraine and their goal of self-rule, which they had before. And Ukraine signed a deal. They gave up their nuclear weapons with the commitment that we would watch out for them and that we would protect them. And, you know, we have not lived up to that. Definitely we do need sanctions on Russia for this, and we do need to continue to support the tools that they need. Unfortunately, we've given them a raw deal. Depleted uranium is a contaminated material, and we're building munitions with depleted uranium. And I know under the Biden administration, we sent over a billion dollars of depleted uranium. I know two little girls who were born with no limbs, with missing limbs and damaged limbs, because their father was exposed to depleted uranium in Afghanistan. And so Ukraine has taken these weapons and bombed their own farmland with it. And so that will affect their own families when their children are born. So, yes, we do need to support them. We do need to continue to support Ukraine. I am concerned about going into the age of AI with a war mindset. If we go into the age of AI with a war mindset, that that will be the death of all of us. But if we go into the AI age with a peace mindset, that that's imperative right now to change, to shift our way of solving problems. Right now, we look to, when we have people in leadership who look to tanks and war as the solution to every problem, then we have a problem. They're going to escalate the wars. But, yeah, we do need sanctions on Russia."
+    },
+    {
+     "candidate": "achilles",
+     "start": 2300,
+     "summary": "Calls Ukrainians freedom fighters; would continue support and increase economic pressure on Russia. Says the war ends when Russia stops fighting.",
+     "text": "I think the Ukrainians are the only freedom fighters in the world right now. We need to continue to support them and increase the pressure on Russia, the economic pressure to make it more difficult for the Russians to conduct a war. Listen, this war is going to end when the Russians stop fighting. It's not going to end if the Ukrainians stop fighting."
+    },
+    {
+     "candidate": "loesby",
+     "start": 2322,
+     "summary": "Says Ukraine cannot win and that the U.S. and NATO discouraged an early deal; would stop sending weapons and push Ukraine to negotiate with Moscow. Calls for the U.S. to leave NATO.",
+     "text": "I think that on the current trajectory, the way this war will end is with the extinction of the Ukrainian people because all their young men are being sent to die against a far larger and more powerful enemy on their border. Russia invaded Ukraine, and they invaded Ukraine because there was a civil war going on in Ukraine, which the U.S. fomented back in 2014. It is an extremely complicated history in this conflict, but where we are right now is that the United States and NATO told Ukraine not to take a deal a couple months into the invasion. The lines have moved a few miles in either direction over the past four years since then, and really all that is happening is Ukrainian and Russian and Russia's allies, their young men are being sent to die for three inches of territory. That needs to end, and it will end if the United States says, All right, Ukraine, we can't afford to nor should we send you more weapons so that you feel like you can continue fighting this war. They cannot win. The only way that Ukraine does not end up dominated by Russia in some manner is if we go to nuclear war against the USSR. Sorry, Russian Federation. I'm sure that that would end very poorly. So what we actually need to do is tell Ukraine, make a deal, we're done, and sorry that you lost territory. Sorry that we pushed you into this. We led you down the Primrose path. We shouldn't have. We need to leave NATO because that is the thing that is the biggest threat to the American people, is being dragged into a war over something half the world away that does not affect Americans' lives. Whether the people of the Donbass are ruled by Moscow or Kiev is irrelevant to everyone's lives except them, and really it's a controversial thing within that territory. They should work that out in peace with negotiations between Kiev and Moscow, not using American missiles."
+    }
+   ],
+   "start": 2163
+  },
+  {
+   "id": "immigration",
+   "topic": "Immigration & the workforce",
+   "audience": true,
+   "context": "Last October, more than 200 officers converged on a horse-racing event in Wilder attended by about 400 people. The FBI said it was investigating illegal gambling; 105 people were detained on immigration violations. A federal lawsuit over the raid is pending in Boise.",
+   "question": "What should immigration policy look like for a community like Canyon County, and what are your views on legal pathways for the workers Idaho farms and dairies rely on?",
+   "answers": [
+    {
+     "candidate": "achilles",
+     "start": 2498,
+     "summary": "Says immigration is a federal issue and he voted against a state immigration bill as a legislator. Proposes four steps — a secure border (credits the Trump administration), a working visa system, a compassionate asylum system, and citizenship for long-time residents — passed on a bipartisan basis.",
+     "text": "You know, immigration is a federal issue. There was an attempt within the state legislature when I served to do sort of a state immigration law, which is fundamentally unconstitutional. I voted against it. So it's hard when, you know, the federal government isn't moving on a major issue that impacts, is manifested in communities. You know, we need to do a couple things. Number one, we need to have a secure border. I think the Trump administration has done a good job on that. You know, number two is we need a visa system that works. We really have gone roughly 30 years without any changes to the visa system. It's completely broken right now, so we need to fix that. You know, we need an asylum system that still has some compassion with it for people living in extraordinary circumstances around the world. And finally, we've got people because of this broken visa system that have been in this country 20, 30 years. They're anchors in the community. They're good people. You know, they deserve a right to become American citizens. And it's just because they were caught up in this broken immigration system isn't a reason to hold them back. So four big things that we need to do within our immigration policy. And, you know, I'll push to do this. And it's got to be done on a bipartisan basis. I think one of the big problems with immigration proposals to date is there's been a Democratic version, there's been a Republican version. Everybody wants to use it for campaigning and raising money when the reality is the only way to fix this thing is to do it across the aisle. It's got to be on a bipartisan basis because that's the only kind of enduring policy."
+    },
+    {
+     "candidate": "loesby",
+     "start": 2596,
+     "summary": "Argues immigrant labor undercuts wages and opportunities for young Americans. Calls for enforcing borders and returning people to their home countries, while keeping immigration easy for cases like marrying an American.",
+     "text": "Well, the reason that these Hispanic immigrants are working on their farms and ranches is because they'll accept lower wages than American workers will take. And fundamentally, that just means that these farms and ranches are taking profits and making food less expensive rather than hiring locals to do hard work in good jobs. So as we keep bringing these people in, all we are doing is undercutting the opportunities that young Americans face when already they face so many other barriers to getting into college, getting jobs in corporations, all these sorts of things. You know, many people in their 60s, 70s and 80s in this county grew up working on those farms and their grandchildren are not growing up working on those farms. Not because they're lazy, not because they're indolent, not because they're worthless, but because somebody coming from 3000 miles away is less expensive. So what we actually need to do is enforce our borders and remove the people to their homelands who can make their own homelands better and reduce the push factors that are actually causing them to say, I can't be in my homeland anymore because it's dangerous or I'm poor or something like that. America is not a place for other people to come to get rich. America is our homeland. We should make it a good place for Americans. Now, we should be able to welcome people from foreign countries if they are improving our communities by joining our communities, not by colonizing our communities. So, for example, someone coming in to marry an American should absolutely have a very easy time to do that and to form a family in America. But someone just coming to work for cheap needs to go back to their homeland and they need to work to make their homeland better."
+    },
+    {
+     "candidate": "fleming",
+     "start": 2703,
+     "summary": "Calls America a nation of immigrants and cites the Bible's protection of immigrants. Says the current system is backlogged and cruel by design, cites lower crime rates among immigrants, and calls for streamlining the process.",
+     "text": "One of my favorite things to do when I'm working on family history is to look at the generation that came to America and look at their stories and the great adversities they faced and the hardships and the challenges that they overcame. And America is a nation of immigrants and it is a beautiful thing. And I think it is a great miracle from God that we were able to bring people together here from all over the world, all the reaches of the world, bring us all together. And that is one of the things that has made America truly great. And as somebody who loves the Bible, I know that the Bible is violently pro-immigrant and very protective of them and saying that you need to make them as one among you, that they need to have the same legal rights. You need to include them in your welfare system and that you need to include them with jobs. So right now, our immigration system is horrific and it is by design. We have fired hundreds of immigration judges. We have a massive backlog, actually a front log, because a friend of mine who sent in paperwork in August got an email in February saying, we received your package, that it is by design and it is cruelty. I tried to make a massive diagram of the immigration system to try to illustrate it, but it was impossible to do. Our immigration system is intended to make them fail. And when you see people who are, quote, illegals, they are people who are trying to use the system wisely. And when you see people who, when they call them criminals, we know that immigrants, legal immigrants commit crimes at half the rate as citizens. And undocumented immigrants commit violent crimes at even half that rate, that they are good contributing people. They are taxpayers and they are paying taxes unrepresented, which is interesting. And we do need to streamline the process. And that is what I've done for a living, is to streamline processes and make them simple. And I'm very grateful for the immigrant community and what they contribute to America. And I'm grateful for my ancestors who came here and the adversities they faced. And I respect them."
+    }
+   ],
+   "start": 2443
+  },
+  {
+   "id": "local-enforcement",
+   "topic": "Local police & ICE (287(g))",
+   "follow_up": true,
+   "question": "Should local police and sheriffs help carry out federal immigration enforcement, or should that be left to federal agents?",
+   "answers": [
+    {
+     "candidate": "achilles",
+     "start": 2855,
+     "summary": "Prefers leaving it to local governments; has argued Idaho police shouldn't partner with ICE until ICE follows the law (judicial warrants, body cameras). Sees a narrow role in removing undocumented people convicted of crimes.",
+     "text": "This sounds like it's specific to the 287(g) program. Listen, I think the best government is local government. You let local government make their own decisions. You know, I wrote an op-ed back several months ago about ICE operations and how ICE is operating outside of the law, using administrative warrants, a set of judicial warrants, the mass, the lack of body cameras, and just basically the unprofessional conduct of ICE. You know, I do not – in that op-ed, I suggested that Idaho law enforcement should not partner with ICE until ICE begins to follow the law. I think that puts our local law enforcement at risk. But ICE does have a place in our immigration process. It's very narrow. If somebody's been convicted of a crime and they're undocumented, then the role of ICE is to send them out of the country. And local police can support that if somebody's been convicted of a crime. You know, I think it's a very narrow case. It's legally defined. And we need to make sure ICE operates within the federal law."
+    },
+    {
+     "candidate": "loesby",
+     "start": 2927,
+     "summary": "Says people who entered without permission are invaders; local police should work with federal agents to remove them with as little violence as possible — not only those charged with crimes.",
+     "text": "When someone has entered the country without the people's permission, that means they are an invader. Local law enforcement should work with federal law enforcement to remove invaders with as little violence as possible. Now, in many cases, this means just walking along to go up to somebody's house or going into a workplace and saying, all right, we're doing this operation to arrest these particular people. And the goal should always be to reduce the amount of violence that can be done. What exactly that means, whether it's helping to control a riot that's breaking out in Minneapolis or just as simple as saying, hello, Mr. ICE officer, Mr. Federal officer. These are the roads that you'll probably want to block off to make sure that nothing bad happens. They should be participating in that way. Obviously, the easiest thing to do is say, oh, hey, we've we found this person. He's being charged with a crime and he's in fact unlawfully present. So let's send it back to his homeland. But it should be far more than that."
+    },
+    {
+     "candidate": "fleming",
+     "start": 2988,
+     "summary": "Opposes federal agencies having power over local ones and calls sanctuary cities \"constitutional cities.\" Says each community should decide whether to turn someone over, citing a case she sees as an overly broad definition of \"criminal.\"",
+     "text": "Okay. When you give power to one federal agency, that means ICE is a federal agency. Now, we have separation of powers. The state powers, the city powers, the city police are under the authority of the local government. And then there's the county and then there's the state. And these different layers are protection to us as individuals. If you give any federal agency power over a community, you're giving all the federal agencies power over the community, whatever the pet agency is of that administration. So for me, sanctuary cities are actually constitutional cities because they are there to protect us. And now, if somebody is convicted of a crime, you know, there's this story of, I don't know his name, the man from Poland who came here when he was four and when he was 17, he did something dumb. And he was convicted of a crime where he paid $100 and then he did community service. And then 26 years later, he's a doctor in an internal whatever at a hospital. I've read the article several times, don't know the dates and time, sorry. And he was arrested 26 years later as a criminal. So we're very, this administration is very loose as to what their definition of a criminal is. So I think it should be up to the community if the community wants to turn over an individual because they feel like that the crimes of that individual are severe enough to turn them over to ICE. That should be determined by the community itself. But I would not, I don't want any federal agencies to have power over local state agencies. And that needs to be completely at the judicial decision of the community, not the federal government."
+    }
+   ],
+   "start": 2832
+  },
+  {
+   "id": "health-care",
+   "topic": "Health care",
+   "context": "Enhanced premium tax credits for marketplace insurance expired at the end of 2025; Idaho's exchange estimates about 30,000 more Idahoans will go uninsured. Starting in January, Idahoans on Medicaid expansion must document at least 80 hours a month of work, school or volunteering — affecting roughly 85,000 people.",
+   "question": "What would you do to make health coverage affordable for working Idahoans and keep rural hospitals and clinics open?",
+   "answers": [
+    {
+     "candidate": "loesby",
+     "start": 3150,
+     "summary": "Would repeal medical licensing laws, which he says created today's insurance system, and end Medicaid, Medicare and Social Security as wealth transfers. Says care gets cheaper when government stops paying for it and lobbies stop restricting access.",
+     "text": "Well, the most important thing to do would be to revert the change that was made between 1850 and 1880 in this country, which was creating the medical licensure laws. The American Medical Association put a lot of work into lobbying to create these licensing laws right around the time we were figuring out the germ theory of disease. And the entire purpose was to give these organizations better control and better profits over the medical industry. That is at the root of what has grown into our massive, complicated mess that is the insurance industry, Obamacare, all the things that have arisen out of that. And Medicaid is ultimately a wealth transfer trying to patch over and buy votes. So not only do we need to end medical licensure laws so that we don't have large lobbies with control over the medical industry, and instead you can just go to somebody who you decide is trustworthy in improving your health, we also need to end these massive wealth transfer programs including Medicaid and Medicare and Social Security and many other wealth transfers that make up the largest items in the federal budget and mean that every one of our taxes are way too high, our dollar is inflated, and we cannot do anything to actually cut spending without really hitting those big spending deals. So you want to get health care cheaper, get the government out of making you, sorry, get the government out of paying for it, and get the lobbying industries out of restricting your access to it."
+    },
+    {
+     "candidate": "fleming",
+     "start": 3245,
+     "summary": "Says a healthy population works better and calls for compassion. Highlights direct primary care paired with catastrophic insurance, criticizes prescription-drug price manipulation, and rejects describing basic care as a wealth transfer.",
+     "text": "What's the point of being the greatest nation in the world if you can't take care of the people in your population and in your community? And a healthy population performs better in all areas including work. Somebody with a foot ache, somebody with a bad foot, when they can't get help from a doctor, then they end up on greater disability because they can't take care of themselves. There's a lot of foolish things that we're doing. They changed the law for orthopedic shoes that you have to have diabetes now to get orthopedic shoes through Medicaid. There's a lot of foolishness going on. So one of the systems that I've seen that is incredibly effective is direct primary care, and that's where the patients are able to pay their doctor directly a set fee per month, and then they're able to go to that doctor for whatever their needs are for basic care, and then they get catastrophic insurance for more severe incidents than what your regular doctor can do. But then, of course, there's also prescription manipulations. For example, we all know that insulin was invented as a matter of compassion, and the original patent was next to nothing, and now insulin has outrageous prices. It's very easy for them to do a time release coding on a pill, and yet a pill can be just the most common over-the-counter pill, but then they do a time release on it, and now it's a thousand dollar pill. There's a lot of manipulations going on the prescription side, on the pill side, medication side, but I think basic care is pretty important, and I have a lot of close friends who are severely disabled and do need help in order for them to function best in society, and they are worthy, and they are contributing to society. I don't look at this as a wealth transfer because these individuals who are getting basic medical care are not getting rich off of it. They're just getting the basic care that they need, and we are a generous nation. We've always been, well, we were a generous nation, and our hearts need to be open continually and compassionate in finding ways, efficient ways, to help them and serve our communities."
+    },
+    {
+     "candidate": "achilles",
+     "start": 3379,
+     "summary": "Opposes unlicensed medicine and says the ACA isn't working. Backs a bipartisan bill to break up large health-care companies, most-favored-nation drug pricing, requiring large employers to cover part-time workers, and a public option.",
+     "text": "Yeah, well, first of all, I'm definitely not in favor of unlicensed doctors, so I'm going to push back on that one, but I think the health care system is, I mean, it is just fundamentally broken right now. The Affordable Care Act isn't working. I think there are two big problems related to the Affordable Care Act that are cascading through the health care system. Number one is it encourages vertical integration, and you've got these massively, these massive corporations in the health care system, like UNITE and some of the others, that are making money across the entire value chain. So there's a bipartisan bill. Jim Risch is not a member of this coalition on the bill, but about breaking up big medicine. So that's step number one. Let's break up these monopolies and bring some competition back to the sector. Number two is on drugs, we don't negotiate most favored nation agreements that, say, countries in Europe have for drug pricing. That's an easy way for us to lower the prices. You know, a lot of the big drug companies right now make their money in the U.S., and they lose it in another country because of government negotiation. So that's another way that we can reduce a lot of the expense and make health care more affordable. And another big one for me, and I dealt with this when I was in the legislature, you know, there's a lot of, because of a loophole, not a loophole, a carve-out in the Affordable Care Act, part-time employees, if you're a large employer with part-time employees, you're not obligated to provide health care for them. So when you look at Walmart, Walmart, one in eight Walmart employees in the U.S. gets their, sorry, one in eight Walmart employees in Idaho gets their health care from us, from Idaho taxpayers from the Medicaid system. Walmart does $3 billion of revenue, and yet they can't take care of their part-time employees. That's just fundamentally wrong. So we need to hold the employers to a higher standard, and we've got to make sure we've got a real, viable public option so people don't get stuck in bad jobs if they need health care."
+    }
+   ],
+   "start": 3092
+  },
+  {
+   "id": "abortion",
+   "topic": "Abortion & Proposition 1",
+   "follow_up": true,
+   "context": "On November 3, Idaho voters will decide Proposition 1, a citizen initiative on abortion access and protections for contraception and IVF.",
+   "question": "After Dobbs, should there be a national abortion law — either setting national limits or protecting access nationwide — or should this stay with the states? (One minute each.)",
+   "answers": [
+    {
+     "candidate": "loesby",
+     "start": 3542,
+     "summary": "Considers abortion homicide, permissible only in cases of self-defense. Agrees with Dobbs that it is a state issue, not a federal one.",
+     "text": "All right, well, the intentional ending of a human life is homicide, and so that should only be permitted in self-defense. There are cases of self-defense involving pregnancies that should be totally permitted, and in all other cases, homicide should be punished under the law. Now, as far as the Dobbs decision, the Dobbs decision held correctly that the U.S. Constitution does not speak to this issue, does not delegate that power to legislate on it to the Congress, nor to the court, as it had taken up the power in Roe v. Wade. So it needs to be a state issue. Now, I will say I don't think that the U.S. founders thought to write in a homicide law into the things that the federal Congress would be dealing with, primarily because they could not imagine that the American people would be confused about what is and is not homicide. So really, the problem with abortion is far more in our culture than it is in our law, but it won't need to be a federal issue either way."
+    },
+    {
+     "candidate": "fleming",
+     "start": 3611,
+     "summary": "Torn between state and federal roles; cites her niece's delayed emergency care and her own experience as a rape survivor. Leans toward federal protections for the health and life of the mother.",
+     "text": "I've tossed and turned over that one, because I am very adamant about state powers and federal powers. But at the same time, my niece was bleeding internally for 10 days before she got the care that she needed, and the Idaho state law, I know that as someone who's experienced rape, only 25 out of 1,000 perpetrators are actually prosecuted. I know that reporting it doesn't actually protect the women. And so I understand the need of getting care quickly and appropriately in either situation. And right now, we have women in crisis. There's a lot of misinformation about the proposition saying that it approves of partial birth abortion and all sorts of terrible things they're saying about it. But as far as state or federal, that is something I've tossed and turned over, and I can't give an honest answer, but right now I would lean towards federal protections for the health and life of the mother. But the problem is, as on rape, you can't report it and be protected. I know firsthand that you're not safe once you report it. So with that loophole, yeah, sorry, I'm over time."
+    },
+    {
+     "candidate": "achilles",
+     "start": 3689,
+     "summary": "Supports Proposition 1; says government shouldn't come between a woman, her doctor and her family. Expects the issue to remain at the state level.",
+     "text": "I mean, right now the structure is that abortion law, reproductive rights are down at the state level. You know, I support Proposition 1. Every abortion is a tragedy. But these incredibly difficult health care decisions don't get any better with government inserting itself between a mom, her doctor, and her family. So I think, you know, for the foreseeable future, this is going to be handled at the state level."
+    }
+   ],
+   "start": 3498
+  },
+  {
+   "id": "budget",
+   "topic": "Budget & national debt",
+   "context": "The Congressional Budget Office projects interest on the national debt will reach about $1 trillion this year — more than the government spends on defense or Medicaid — and federal agencies have been through three funding lapses totaling 123 days over the past year.",
+   "question": "Name one specific spending cut and one revenue change you would support to bring deficits down.",
+   "answers": [
+    {
+     "candidate": "fleming",
+     "start": 3764,
+     "summary": "Revenue: streamline immigration so more people work and pay taxes legally, citing a Cato study. Cut: offensive military spending such as the Iran war. Adds that Medicaid spending helps keep people healthy enough to work.",
+     "text": "Okay, the first one is immigration. Cato did a study showing that immigrants have contributed over the last three decades about what was it, $27 trillion to the federal budget and because of their contributions, our federal debt has actually gone down. So streamlining their process, streamlining the immigration process and making sure that people who do come here are able to work legally and fully participate in our economy. We know that they're the great entrepreneurs who start great businesses and that they have an incredible work ethic. Those of us who have been around too long, we get a little lazy, but they're an incredible asset, incredible revenue stream and so to have them being able to pay taxes legally without prosecution or persecution would be a great thing and we know that they have helped boost up Social Security over the years. So we need to do it in a legal and fair process. Cuts, well, I think we should cut back spending on paying AIs to calculate which schools to bomb in Iran. The amount of money that we're spending bombing people is without, we don't actually, that's offensive literally. We're on the offense, not defense, and I believe in defensive spending and not what we're doing right now. But yeah, I think streamlining the immigration process and bringing more people into the workforce in a healthy way, I think actual spending, why spending in Medicaid actually bring more people into the workforce? Because they are more able to work if they don't have a toothache and when people are healthy they can work better."
+    },
+    {
+     "candidate": "achilles",
+     "start": 3870,
+     "summary": "Notes the debt grew from $10 trillion to $40 trillion during Sen. Risch's tenure. Cut: reject the proposed defense increase from $1 trillion to $1.5 trillion. Revenue: close corporate loopholes (about $300 billion) and tax-avoidance strategies used by high earners.",
+     "text": "Our national debt right now is a disaster and when Jim Risch first entered the Senate in 2009 it was $10 trillion and now it's $40 trillion. Nobody should be asking to go back in with that kind of job performance. We absolutely have to stop this. The first step is just to make sure that we keep our revenues and expenses in line. For FY27 that's going to be about $2 trillion. Right now the forecast is that we'll overspend our revenues. So to fix these things we need to look at both sides of the ledger. So on the spending cuts, the biggest one is there's absolutely no reason why to increase the Department of Defense from this current $1 trillion budget to the $1.5 trillion that's being proposed right now. That saves us $500 billion, which is about 25% of the gap that we've got in FY27. And then the other one is on the revenue side. We've got a tax system that's nothing but a bunch of, it's a Swiss cheese of loopholes and carve-outs and everything else. There were 88 companies in 2025 with over $100 billion in revenue that paid zero tax. I paid more tax in 2022 than my old employer T-Mobile. I mean, that's just outrageous. So closing these corporate loopholes and holding a big business accountable probably drops about $300 billion of incremental revenue to help close the gap. And then there's a lot we can do among very high-income Americans who also have a range of tax avoidance schemes. You know, there's probably another 10 to 15% of the budget gap that we can get from closing those loopholes for high-income Americans."
+    },
+    {
+     "candidate": "loesby",
+     "start": 3971,
+     "summary": "Says the problem is spending, not revenue. Would end Medicare, Medicaid and Social Security, end foreign wars, bring troops home, and cut regulations and taxes.",
+     "text": "Well, as I mentioned earlier, the three biggest line items in our budget are Medicare, Medicaid, and Social Security. Now, many of you in here will be expecting or are already drawing your Social Security. And it's important to remember that historically Social Security was created to start in your mid-60s when the life expectancy was in your late 60s to early 70s at a time when there were about three and a half taxpayers per retiree or benefits recipient. Now with the size of the baby boom compared to subsequent generations, we do not have that ratio anymore. Taxpayers and productive people compared to recipients is down to 2.5 at the most generous and it's probably substantially lower than that. So we don't have a revenue problem in the United States. We have too many taxes that need to be cut, not raised, but we have a spending problem. And it will not be addressed by just reducing things around the edges. It will not be addressed by finding some fraud. It will only be addressed by aggressively cutting the government-run charity schemes that have replaced the actual generosity of the American people, which is caring for the people in our community through voluntary charity. So we need to end the three biggest line items in the federal budget. We need to end these horrific foreign wars that are costing way too much money. We need to bring the troops home, and we need to cut regulations and cut taxes to encourage the American people to be more productive, generate a bunch more wealth, and then maybe the government can get a little bit of that if we're feeling generous."
+    }
+   ],
+   "start": 3717
+  },
+  {
+   "id": "social-security",
+   "topic": "Social Security",
+   "follow_up": true,
+   "context": "Social Security's retirement trust fund is projected to run short in the early 2030s, which would trigger automatic benefit cuts.",
+   "question": "Would you raise or lift the cap on payroll taxes, raise the retirement age, trim benefits for higher earners, or do something else?",
+   "answers": [
+    {
+     "candidate": "fleming",
+     "start": 4107,
+     "summary": "Would grow revenue by removing barriers for small businesses and improving health so more people can work. Calls for investing in families, children and education, using the LDS Church's welfare model as an example.",
+     "text": "Opening the door to small businesses. The more people that are working and contributing to society, then we have more revenue in for Social Security. Right now, small businesses have a lot of barriers in starting. A lot of people aren't working because of health care problems. It comes back to health care. I'm LDS, and you know the LDS Church has a lot of money. And the LDS Church is known for having a lot of money. And the way the LDS Church got wealthy is they invested in the people. They invested in education, and they invested in food. So if an LDS family is lacking in money monetarily, and they don't have enough food, they can go to the church, and they were provided with food. The church also provides an excellent education system. And that is a long-term investment that the church invests in people. And those people grow up, and a child that is well-fed will grow up in a more stable home in their community. And they will pay their tithing when they're older. When you invest, the best long-term investment is people. And those choices, a lot of times we want to do cutbacks in education or cutbacks in children's education and food. So I'm all for supporting school lunches, breakfast, whatever. But you support families, support young people. And support education, and that creates a long-term revenue stream. You have to invest in the people, and the people will invest back in the end. So those kinds of programs are where the real rescue is. And right now a lot of young families aren't, young people aren't willing to have families they don't feel that they can afford to even start a family. So we need those programs to help family and invest in people, invest in education. That is the solution, to invest in people."
+    },
+    {
+     "candidate": "achilles",
+     "start": 4235,
+     "summary": "Would lift the payroll-tax cap (currently $184,500) entirely, which he says covers about 73% of the gap, and tax investment income like wages for the rest. Opposes trimming benefits.",
+     "text": "Yeah, I mean, Social Security is self-contained, so it's really just a math problem. I absolutely agree that we need to lift the cap. The $184,500 cap right now penalizes lower-wage workers, and it gives it out to higher-wage workers. So we should lift the cap entirely. That covers about 73% of the gap. And the other way to do it is we've had this misplaced policy for a long time that investment income gets preferential rates to salary income. So if you, in terms of funding Social Security, if you treat investment income like salary income, that'll close basically the rest of the gap. I do not agree with trimming benefits. I've spoken to enough seniors and senior centers around Idaho who are really struggling to get by, particularly widows and widowers who have a significant tax when it comes to their Social Security benefits. So we need to work the other way on the benefits side, but there's a way to fix the revenue side on this."
+    },
+    {
+     "candidate": "loesby",
+     "start": 4301,
+     "summary": "Calls Social Security a Ponzi scheme; would cut benefits and raise the retirement age over time toward abolishing the system, relying on families and voluntary generosity instead.",
+     "text": "Well, I already went into a little bit of detail, but I will say that there is no way to fix the revenue side on this because it is only going to grow. And as health care is improving and we are getting more longevity, thank God, but that does mean that's more years that we're paying into people's retirements. Fundamentally, Social Security is a Ponzi scheme, and the only way that a Ponzi scheme ends is that somebody is left holding the bag. Now, the baby boomer generation is currently the wealthiest generation in all of history, while many in the younger cohort are struggling as well. That doesn't mean that every single elderly person is a millionaire, but it does mean that there's a lot more wealth in that generation than the younger generations have access to. And so fundamentally, the people who have the most wealth are going to have to hold some of this bag. That means cutting benefits over time. That means raising the retirement age over time in the direction toward entirely abolishing the system. And again, the American people are generous. We do love our neighbors. We love our grandparents. We love our parents. And so we will be able to say, we have a lot of wealth. We will help out the people we love."
+    }
+   ],
+   "start": 4060
+  },
+  {
+   "id": "path-to-victory",
+   "topic": "Path to winning",
+   "audience": true,
+   "context": "Republicans have not lost a U.S. Senate race in Idaho since 1974. The Democratic nominee ended his campaign this summer, so every candidate on stage is running outside the two major parties.",
+   "question": "What is your realistic path to winning, and which voters do you still need to persuade?",
+   "answers": [
+    {
+     "candidate": "achilles",
+     "start": 4431,
+     "summary": "Cites 16 months and 300+ events around the state, and says about 65% of Idahoans identify as or lean independent. Says his polling shows him ahead of Sen. Risch and calls this the best chance in 50 years to defeat him.",
+     "text": "So I've traveled for the last 16 months around the state, held over 300 events, talking to Idahoans. There's two things that you hear from Idahoans right now. They are frustrated by the inaction in Congress and the corruption that they see in Congress, and this rigged economy that's not working for them. They want change. Now, what's clear is that neither political party is delivering any of that change that Idahoans are looking for. And I think the reality is in our state, as well as our neighbors like Wyoming and next door and the Dakotas in Nebraska, is the National Democratic Party has taken these states off of their map and has just given up on them. And as a result, the Republican Party takes us for granted. And Idahoans see that, and they want change, and they're frustrated by this political and economic system that's not working for them. And when you look at the numbers, roughly 65% of Idahoans self-identify as independent or lean independent. So there's this massive group of Idaho voters in the middle that don't feel represented by either party. You do the math on that, that's a winning vote share. So we absolutely have a path to win in this campaign. We're doing the work, we're raising the money, we've got the volunteers, we're putting in the effort, and we've got the polling that shows we're ahead of Jim Risch. And the other thing, when you talk to Idahoans, absolutely nobody in this state wants to send an entitled 83-year-old back for another six years, who has completely let down the state and who's lost his way and no longer votes Idaho values. So put these things together, and we have the best shot in 50 years at defeating Jim Risch, and we're going to do it on November 3."
+    },
+    {
+     "candidate": "loesby",
+     "start": 4537,
+     "summary": "Says he expects Sen. Risch to win and is running for other goals: sending national Republicans a message about Israel, Ukraine and federal spending.",
+     "text": "Well, I think everyone in this room knows that running as a Democrat statewide in Idaho would be a terrible decision, it's a guaranteed loss, and so it's a very good idea to leave the Democrat party if you want to try to beat a Republican incumbent. Now, most of us on this stage are very realistic about our chances in this election, I think, and so I don't need to go into a lot of detail about what I'm doing to beat Jim Risch, because, frankly, I know I won't. I know he's going to be re-elected, and I'm okay with that. I'm achieving other goals with this campaign. Now, why one of you should vote for me rather than Jim Risch? Well, it is important to send a message to the Republican party nationally that their priorities of serving this foreign state called Israel, keeping the U.S. involved in Ukraine, spending trillions of our dollars on ridiculous projects, these are things that need to be punished. So that's why you shouldn't vote for Republicans, but also all of us on this stage should be realistic about what our odds actually are."
+    },
+    {
+     "candidate": "fleming",
+     "start": 4599,
+     "summary": "Points to talking with thousands of voters while gathering signatures for the medical cannabis initiative, and says she trusts Idahoans to research the candidates. Criticizes the pressure on Democrat David Roth to leave the race.",
+     "text": "Hi, thank you. So I spent last winter, I worked on the medical cannabis drive, and I spent the winter in front of the DMV getting petition signatures and handing out my flyers and talking to voters all across the valley, and I spoke to thousands of voters, freezing my butt off. Am I allowed to say that? And being able to hear the things that people are concerned about. Right now, people are very, very stressed, and they're doing their homework, and they're really looking to an answer. And I believe in the people of Idaho, and I believe that they will give me a chance. And I think that things are, because of the instability of what's happening in the world, the lack of confidence in the two-party system, I was very sad when David Roth dropped out, and I saw that the pressure is within his own party to have him drop out. I was very offended by that. And I know that the Montana Democrat is being pressured to drop out of that race because a lot of the Democrats decided to push independent candidates rather than their own party candidates as a strategy to get in through Republican-dominated states. And so when I saw what happened to David Roth, and yeah, that was not cool. So my path to victory is in trusting in the people of Idaho. I love them. I've lived here for many years, and I am very great. I really believe in the people of Idaho, that they're taking their time to look people up and to do their research. And that's what I'm counting on."
+    }
+   ],
+   "start": 4381
+  },
+  {
+   "id": "vacancy-law",
+   "topic": "Senate vacancy law (Idaho Code 59-910)",
+   "context": "Under Idaho Code § 59-910, if a U.S. Senate vacancy occurs within 30 days of an election, no election for that seat is held in the general election — arguably letting the governor appoint the next senator if the incumbent retired in that window.",
+   "question": "Is this a conspiracy theory or hardball politics? How likely is something like this?",
+   "answers": [
+    {
+     "candidate": "loesby",
+     "start": 4768,
+     "summary": "Would want to read the precedents first; expects a court challenge if it were tried. Thinks it more likely Sen. Risch wins, retires in a year or two, and Gov. Little appoints a successor.",
+     "text": "Well, I would want to read what precedents there are about that statute to be able to answer very intelligently about how reasonable that would be. I think if it were tried, it would be challenged in courts, and it would be a whole big mess, which would be a lot of fun for the news stations and probably a lot less fun for the people on this stage. I think it is far more likely that Mr. Risch will take office again this coming January, and then in a year or two will decide to retire, and at that point, Governor Little will appoint his replacement. I think that would be far more secure for him than any sort of attempts to play around the election. I think the Republican Party has other problems they're going to be trying to fight during the election, and they're not going to want to deal with little old Idaho at the time."
+    },
+    {
+     "candidate": "fleming",
+     "start": 4818,
+     "summary": "Says the idea is new to her and alarming; doubts Idahoans would accept it and expects public outrage, though she isn't predicting it will happen.",
+     "text": "This one is new to me. That's actually kind of frightening. Well, the people of Idaho are very independent. Even people who would support Jim Risch, I think they would be very horrified. I don't believe the people of Idaho would accept that decision as to whether the legality of it. I don't know if it's legal. I'd have to do some digging. I could see the logic behind it, and I can see the lack of presence here tonight, and the central leadership in Idaho not participating in their debates and participating with the people. I can kind of see how maybe they would do that. I'm not predicting that that's going to happen, though. That is absolutely shocking to me. It is a new piece of information. If they were to try that, it would cause, I think, great outrage within the state of Idaho, and I don't think that it could survive just from the outrage of it. So we are very independent and very strong-willed, and we are a Second Amendment state, and so I don't see that flying with the people of Idaho."
+    },
+    {
+     "candidate": "achilles",
+     "start": 4887,
+     "summary": "Calls the 1917 statute unconstitutional under the 17th Amendment, notes roughly 100,000 ballots have already been mailed, and warns the maneuver could be repeated indefinitely.",
+     "text": "Yeah, I think this 1917 statute is an interesting one. I think if Senator Risch tried to do this 30-day October surprise, I mean, I think it's unconstitutional and it violates the 17th Amendment. We've already had roughly 100,000 ballots that have been mailed out. People have already returned those ballots and voted, and it creates, I think, a very dangerous situation where you're getting into a never-ending loop of never electing another senator in the state of Idaho because every 30 days or every election every two years, 30 days out, somebody resigns, the governor appoints, and guess what? You never elect another senator in another state. So I'm with Natalie on this. I don't think Idahoans would stand for that."
+    }
+   ],
+   "start": 4697
+  }
+ ],
+ "lightning": {
+  "id": "lightning-round",
+  "topic": "Lightning round",
+  "items": [
+   {
+    "question": "Should members of Congress be barred from trading individual stocks?",
+    "answers": [
+     {
+      "candidate": "fleming",
+      "start": 4954,
+      "summary": "Yes",
+      "text": "Yes."
+     },
+     {
+      "candidate": "achilles",
+      "start": 4956,
+      "summary": "Yes",
+      "text": "Absolutely."
+     },
+     {
+      "candidate": "loesby",
+      "start": 4958,
+      "summary": "No",
+      "text": "No."
+     }
+    ],
+    "start": 4948
+   },
+   {
+    "question": "Do you support term limits for members of Congress?",
+    "answers": [
+     {
+      "candidate": "achilles",
+      "start": 4966,
+      "summary": "Yes — including for the Supreme Court; pledges to serve at most two terms",
+      "text": "Yes, and the Supreme Court, and I've taken a commitment to serve only two years in the Senate, or two terms in the Senate, 12 years."
+     },
+     {
+      "candidate": "loesby",
+      "start": 4974,
+      "summary": "No",
+      "text": "No."
+     },
+     {
+      "candidate": "fleming",
+      "start": 4977,
+      "summary": "Undecided; would step down after accomplishing specific goals",
+      "text": "Still undecided. Can I qualify it? There's goals that I have. I would say when we've accomplished A and B, then I would step down. I have specific goals that we want to accomplish, but I haven't decided on the term limits. Does that make sense?"
+     }
+    ],
+    "start": 4959
+   },
+   {
+    "question": "Should marijuana be legalized at the federal level?",
+    "answers": [
+     {
+      "candidate": "loesby",
+      "start": 5003,
+      "summary": "Torn — yes philosophically, but cites Colorado's experience",
+      "text": "I'm torn because, strictly philosophically, yes. However, I grew up in Colorado, and I watched legalization destroy that state as people moved into that state who wanted to smoke marijuana, so I'm torn."
+     },
+     {
+      "candidate": "fleming",
+      "start": 5020,
+      "summary": "Undecided federally; supports medical cannabis in Idaho",
+      "text": "Well, I worked on the medical cannabis drive, but as far as state powers, I'm undecided on the federal level. So on the state, I do support it for the state of Idaho for medical, but on the federal level, I'm big on state powers."
+     },
+     {
+      "candidate": "achilles",
+      "start": 5034,
+      "summary": "Medical cannabis only",
+      "text": "Well, I think at the federal level, just medical cannabis."
+     }
+    ],
+    "start": 4997
+   },
+   {
+    "question": "Do you support background checks on all gun sales, including private sales?",
+    "answers": [
+     {
+      "candidate": "fleming",
+      "start": 5049,
+      "summary": "Not for private sales",
+      "text": "Private sales? No."
+     },
+     {
+      "candidate": "achilles",
+      "start": 5051,
+      "summary": "Yes",
+      "text": "I do support background checks, yes."
+     },
+     {
+      "candidate": "loesby",
+      "start": 5057,
+      "summary": "Would repeal the National Firearms Act of 1934",
+      "text": "We need to repeal the National Firearms Act from 1934."
+     }
+    ],
+    "start": 5042
+   }
+  ],
+  "start": 4934
+ },
+ "closing": {
+  "id": "closing",
+  "topic": "Closing statements",
+  "question": "Give us your final argument for your campaign. (Two minutes each.)",
+  "answers": [
+   {
+    "candidate": "achilles",
+    "start": 5080,
+    "summary": "Says Idahoans want someone who will work across the aisle. Criticizes Sen. Risch for voting with party leadership 99.7% of the time and holding no public town halls; cites his own farm upbringing, Army service, tech career, teaching and legislative experience, and says an independent vote would carry extra weight in a closely divided Senate.",
+    "text": "Yeah, well, again, thank you very much, everybody, for holding this event and Natalie and Matt sit next to you guys and answer these questions. Idahoans are looking for change. Idahoans are looking for somebody who is going to work across the aisle to get the hard things done that just haven't happened in this country for too long. Jim Risch has spent 18 years in the Senate, and he represents everything that's broken about that body. He votes with leadership 99.7% of the time. There is absolutely nothing in Washington, D.C. that aligns with Idaho's interests 99.7% of the time. Jim's far more interested in being an insider and being a committee chair than he is in representing Idahoans. I grew up on a farm. I was a 4-H kid. I served on active duty in the Army. I spent 20 years in business in the tech sector. I teach public policy, and I served in the Idaho legislature. I've got the background to represent the state, and I've done the hard work in this campaign to travel the state and listen to people and understand what's going on. Jim hasn't held a public town hall in 18 years. He has no idea of the challenges in the state, no idea that 60% of Idahoans don't earn a livable wage, no idea that one in seven Idahoans is going to miss a meal, no idea that we're the third highest state on domestic violence and intimate partner violence, no idea that we've got two of the least expensive housing markets in the country, and he's got no idea of the struggles of everyday folks just trying to live in the state. So we need somebody that understands what's going on in Idaho that will work as an independent in Congress, and in a closely divided Senate that independent vote is going to be far more popular or far more powerful than being a part of either caucus. So I would appreciate everybody's support on November 3. This is the time to change the representation in Washington, D.C., and I appreciate people's support to do that."
+   },
+   {
+    "candidate": "loesby",
+    "start": 5206,
+    "summary": "Says the key question is whom the government serves. Argues Democrats serve minority \"client groups\" and Republicans serve the \"Zionist lobby,\" H-1B employers and corporate donors; asks voters to punish both parties and reclaim \"our homeland.\"",
+    "text": "The most important question in politics is not one of policy, but one of whom the government serves. Now, over the past several years, we have watched as the Democrat Party and their independent Senator friends have made it clear that they serve ethnic minorities, they serve sexual minorities, and they do not serve the American people. They want to transfer wealth and transfer well-being from the American people descended from the American founding population to their particular client groups that give them votes every two years. In the past couple of years, we have watched as the Republican Party makes it very clear they are not loyal to the American people either. They are loyal to the Zionist lobby based in Israel and New York City. They are loyal to their Indian billionaire friends as they bring in H-1Bs. They are loyal to their donors who want cheap farm labor. They are loyal to their corporate donors who want special treatment and handouts. We need to send a message to Washington, D.C., that the American people are sick and tired of being unrepresented in our own government. This is our homeland. Our ancestors founded this country, conquered this country, and it is not to be taken away from us just because a few politicians have friends from foreign countries. So we need to punish the Republicans. We need to punish the Democrats. And we need to show them the Americans are a people. This is our homeland. We will have our homeland again. Thank you."
+   },
+   {
+    "candidate": "fleming",
+    "start": 5296,
+    "summary": "Describes her background: raised on an Oregon farm, a single mother of four in Idaho, and a degree in IT management. Priorities include limits on AI, data centers and mass surveillance, opposition to authoritarianism in both parties, women's issues including the SAVE Act, and forest management.",
+    "text": "Thank you for having me here tonight. So my history, you know, I was born in Oregon, and I grew up on an Oregon farm, spent my summers out in the high desert. I understand all that we've all been going through. You know, I did the paper route in Moscow, Idaho, yes, uphill both ways in the snow. I raised four kids here. I brought my kids here on the 4th of July in 2002 and returning. And I raised my kids as a single mom here. I understand the struggles people have. I have a daughter with disabilities, and I understand the disability fight that we're having right now in Congress. Out of high school, I worked for a software company out of high school and tried to keep up over the years. I went back in 2001, 2021, to get my degree in information technology management, supply chain, and cybersecurity. And I, right now, when we're going, entering in this age of AI, a lot of people are really scared. And I think that there's a lot of regulations. We need to make changes, keeping up with technology and putting limits on the AI and the data centers that we have and the mass surveillance and the mass authoritarian state. I see both the Democrats and the Republicans as massively authoritarian. And so we need to protect those freedoms. And I understand the challenges that each individual is facing right now. Do you know that one of our big exports is plasma? The people, the American people, are poor and they're going and they're donating plasma on a regular basis just to make ends meet. And I understand that. And I feel like everything that's happening is kind of personal to me coming from Moscow and seeing what's happening in Moscow, Idaho right now with the oppression towards women that's happening there. And then, of course, I was at Boise State University when a certain professor was saying very derogatory things about women. And the SAVE Act passed the House on my birthday. And the SAVE Act is very restrictive and harsh on women as far as the paperwork that we have to go through in order to prove our identity. So it's all very personal to me. And then, of course, the fires, the forest fires. I'm big on forest management and land management, et cetera. And it is over time, but I want to go on for 15 minutes. But thank you."
+   }
+  ],
+  "start": 5065
+ }
+}</script>
+<script>
+const DATA = JSON.parse(document.getElementById('forum-data').textContent);
+const EV = DATA.event;
+const CANDS = Object.fromEntries(DATA.candidates.map(c => [c.id, c]));
+const PLAY = '<svg viewBox="0 0 10 10" aria-hidden="true"><path d="M1 0l9 5-9 5z"/></svg>';
+
+const esc = s => s.replace(/[&<>"]/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[ch]));
+const fmt = t => {
+  const h = Math.floor(t / 3600), m = Math.floor(t / 60) % 60, s = t % 60;
+  return (h ? h + ':' + String(m).padStart(2, '0') : m) + ':' + String(s).padStart(2, '0');
+};
+const ytUrl = t => `https://www.youtube.com/watch?v=${EV.youtube_id}` + (t != null ? `&t=${Math.max(0, t - 1)}s` : '');
+const watch = (t, label = 'Watch') =>
+  `<a class="watch" href="${ytUrl(t)}" target="_blank" rel="noopener" title="Open on YouTube at ${fmt(t)}">${PLAY} ${label} ${fmt(t)}</a>`;
+
+// ── Static sections ──
+document.getElementById('subtitle').textContent = `${EV.date_label} · ${EV.location}`;
+document.getElementById('sponsors').innerHTML = EV.sponsors.map(s =>
+  `<a href="${s.url}" target="_blank" rel="noopener" class="${s.role ? 'co' : ''}">${esc(s.name)}${s.role ? ` (${s.role})` : ''}</a>`).join('');
+document.getElementById('event-meta').innerHTML =
+  `Moderated by ${EV.moderators.map(m => `<strong>${esc(m.name)}</strong>`).join(' and ')} of the College of Idaho · ${esc(EV.election_label)}`;
+
+document.getElementById('candidates').innerHTML =
+  DATA.candidates.map(c => `
+    <div class="cand" style="--c:var(--${c.id})">
+      <span class="bar" style="background:var(--${c.id})"></span>
+      <div><div class="name">${esc(c.name)}</div><div class="party">${esc(c.party)}</div></div>
+      <a class="site" href="${c.url}" target="_blank" rel="noopener">Campaign site ↗</a>
+    </div>`).join('') +
+  DATA.absent.map(c => `
+    <div class="cand absent">
+      <span class="bar" style="background:#cbd5e1"></span>
+      <div><div class="name">${esc(c.name)}</div><div class="party">${esc(c.party)} — ${esc(c.note)}</div></div>
+      <a class="site" href="${c.url}" target="_blank" rel="noopener">Campaign site ↗</a>
+    </div>`).join('');
+
+document.getElementById('intro-links').innerHTML =
+  `<a class="watch" href="${ytUrl()}" target="_blank" rel="noopener">${PLAY} Full forum on YouTube</a> ` +
+  EV.segments.map(s => watch(s.start, s.label)).join(' ');
+
+// ── Question cards ──
+const all = [...DATA.questions, DATA.lightning, DATA.closing];
+let n = 0;
+all.forEach(q => { if (!q.follow_up) n++; q.num = q.follow_up ? null : n; });
+
+function answerHTML(a, i) {
+  const c = CANDS[a.candidate];
+  const words = a.text.split(/\s+/).length;
+  return `
+    <article class="ans" data-cand="${c.id}" style="--c:var(--${c.id})">
+      <div class="ans-head">
+        <span class="ans-name">${esc(c.name)}<span class="ans-order">${['1st','2nd','3rd'][i]}</span></span>
+        ${watch(a.start)}
+      </div>
+      <p class="ans-summary">${esc(a.summary)}</p>
+      <details>
+        <summary>Read full answer (${words} words)</summary>
+        <div class="full" data-raw="${esc(a.text)}">${esc(a.text)}</div>
+      </details>
+    </article>`;
+}
+
+function headHTML(q) {
+  const badges = (q.follow_up ? '<span class="badge">Follow-up</span>' : '') +
+                 (q.audience ? '<span class="badge">Includes audience questions</span>' : '');
+  return `
+    <div class="q-head">
+      <div class="q-topic">
+        <h2>${q.num ? q.num + '. ' : ''}${esc(q.topic)}</h2>${badges}
+        <a class="anchor" href="#${q.id}" title="Link to this question">#</a>
+      </div>
+      ${q.context ? `<p class="q-context">${esc(q.context)}</p>` : ''}
+      ${q.question ? `<p class="q-text">${esc(q.question)}</p>` : ''}
+      ${watch(q.start, q.question ? 'Question at' : 'Starts at')}
+    </div>`;
+}
+
+function lightningHTML(q) {
+  const order = ['achilles', 'fleming', 'loesby'];
+  const head = order.map(id => `<th style="--c:var(--${id})">${esc(CANDS[id].name)}</th>`).join('');
+  const rows = q.items.map(it => {
+    const by = Object.fromEntries(it.answers.map(a => [a.candidate, a]));
+    return `<tr data-search="${esc(it.question)}">
+      <th scope="row">${esc(it.question)}</th>
+      ${order.map(id => { const a = by[id]; return `
+        <td class="ans" data-cand="${id}" data-name="${esc(CANDS[id].name)}" style="--c:var(--${id})">
+          <div class="short">${esc(a.summary)}</div>
+          <div class="quote full" data-raw="${esc(a.text)}">“${esc(a.text)}”</div>
+          ${watch(a.start)}
+        </td>`; }).join('')}
+    </tr>`;
+  }).join('');
+  return `<table class="lightning"><thead><tr><th></th>${head}</tr></thead><tbody>${rows}</tbody></table>`;
+}
+
+document.getElementById('questions').innerHTML = all.map(q => `
+  <section class="q${q.follow_up ? ' follow-up' : ''}" id="${q.id}">
+    ${headHTML(q)}
+    ${q.items ? lightningHTML(q) : `<div class="answers">${q.answers.map(answerHTML).join('')}</div>`}
+  </section>`).join('');
+
+document.getElementById('toc').innerHTML = all.map(q =>
+  `<li class="${q.follow_up ? 'fu' : ''}"><a href="#${q.id}">${q.num ? q.num + '. ' : '↳ '}${esc(q.topic)}</a></li>`).join('');
+
+document.getElementById('footer').innerHTML = `
+  <p><strong>About this page.</strong> The transcript was generated automatically with OpenAI Whisper and lightly edited: filler words and repeated words were removed and names were corrected. Summaries were written with AI assistance and aim to be neutral and of similar length for every candidate. The <a href="${ytUrl()}" target="_blank" rel="noopener">video recording</a> is the authoritative record; follow the ▶ links to hear any answer in full.</p>
+  <p>Questions are shown as asked by the moderators, lightly condensed. Not affiliated with the forum's sponsors or any campaign.</p>`;
+
+// ── Filtering ──
+const active = new Set(DATA.candidates.map(c => c.id));
+const filters = document.getElementById('filters');
+filters.innerHTML = DATA.candidates.map(c =>
+  `<button class="chip" aria-pressed="true" data-id="${c.id}"><span class="dot" style="background:var(--${c.id})"></span>${esc(c.name.split(' ').pop())}</button>`).join('');
+filters.addEventListener('click', e => {
+  const b = e.target.closest('.chip'); if (!b) return;
+  const id = b.dataset.id;
+  if (active.has(id) && active.size === 1) return;          // keep at least one
+  active.has(id) ? active.delete(id) : active.add(id);
+  b.setAttribute('aria-pressed', active.has(id));
+  apply();
+});
+
+const search = document.getElementById('search');
+let timer;
+search.addEventListener('input', () => { clearTimeout(timer); timer = setTimeout(apply, 120); });
+
+function highlight(el, terms) {
+  const raw = el.dataset.raw;
+  let html = esc(raw);
+  if (terms.length) {
+    const re = new RegExp('(' + terms.map(t => esc(t).replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|') + ')', 'gi');
+    html = html.replace(re, '<mark>$1</mark>');
+  }
+  el.innerHTML = el.classList.contains('quote') ? `“${html}”` : html;
+}
+
+function apply() {
+  const terms = search.value.trim().toLowerCase().split(/\s+/).filter(Boolean);
+  const matches = txt => terms.every(t => txt.toLowerCase().includes(t));
+  let shown = 0;
+
+  document.querySelectorAll('.ans').forEach(a => a.classList.toggle('hidden', !active.has(a.dataset.cand)));
+  document.querySelectorAll('.full').forEach(el => highlight(el, terms));
+
+  document.querySelectorAll('.q').forEach(q => {
+    if (!terms.length) { q.classList.remove('hidden'); q.querySelectorAll('details').forEach(d => d.open = false); shown++; return; }
+    const headTxt = q.querySelector('.q-head').textContent;
+    const headHit = matches(headTxt);
+    let anyAns = false;
+    q.querySelectorAll('.ans:not(.hidden)').forEach(a => {
+      const txt = a.textContent + ' ' + (a.querySelector('.full')?.dataset.raw || '');
+      const hit = matches(txt);
+      anyAns = anyAns || hit;
+      const d = a.querySelector('details');
+      if (d) d.open = hit && matches(a.querySelector('.full').dataset.raw);
+    });
+    q.querySelectorAll('tbody tr').forEach(tr => {
+      const hit = headHit || matches(tr.dataset.search + ' ' + tr.textContent);
+      tr.classList.toggle('hidden', !hit);
+    });
+    const visible = headHit || anyAns;
+    q.classList.toggle('hidden', !visible);
+    if (visible) shown++;
+  });
+
+  const total = all.length;
+  document.getElementById('count').textContent = terms.length ? `${shown} of ${total} questions` : '';
+  document.getElementById('empty').classList.toggle('hidden', shown > 0);
+}
+
+// Keep anchored cards clear of the sticky header (taller on phones), and honor #links after render
+const hdr = document.querySelector('header');
+const setOffset = () => document.documentElement.style.setProperty('--hdr', hdr.offsetHeight + 12 + 'px');
+setOffset(); addEventListener('resize', setOffset);
+if (location.hash) document.getElementById(decodeURIComponent(location.hash.slice(1)))?.scrollIntoView();
+</script>
+</body>
+</html>
