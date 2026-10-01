@@ -1,4 +1,4 @@
-"""Build docs/senate_candidate_forum_2026.html from the Whisper transcript.
+"""Build docs/senate-candidate-forum-2026.html from the Whisper transcript.
 
 Usage (from the repo root):
     python forum/build_senate_forum.py [--transcript PATH]   # write the page
@@ -15,7 +15,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 TEMPLATE = ROOT / 'forum' / 'senate_forum_template.html'
-OUTPUT = ROOT / 'docs' / 'senate_candidate_forum_2026.html'
+OUTPUT = ROOT / 'docs' / 'senate-candidate-forum-2026.html'
 
 parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
 parser.add_argument('--transcript', type=Path, default=ROOT / 'videos' / 'transcript' / 'audio.json')

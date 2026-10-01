@@ -5,7 +5,7 @@
 
 # Idaho
 - [Idaho ARPA Dashboard](idaho_arpa_dashboard.html)
-- [U.S. Senate Candidate Forum (Sept. 30, 2026)](senate_candidate_forum_2026.html)
+- [U.S. Senate Candidate Forum (Sept. 30, 2026)](senate-candidate-forum-2026.html)
 
 ## 2026 Budget
 - [Sunburst](sunburst_budget.html)
