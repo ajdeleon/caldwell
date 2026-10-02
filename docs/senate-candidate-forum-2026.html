@@ -9,19 +9,25 @@
 <meta property="og:description" content="Read and watch how Todd Achilles, Natalie Fleming and Matt Loesby answered each question at the Caldwell candidate forum.">
 <meta property="og:type" content="website">
 <style>
-
+/* Type scale: 3 sizes (--fs-sm, --fs, --fs-lg), 2 weights (400/600), 2 text colors (--text, --muted).
+   Candidate colors mark names only. */
 * { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-       background: #f0f2f5; color: #2c3e50; line-height: 1.55; }
-a { color: inherit; }
-
 :root {
+  --text: #1e293b;
+  --muted: #64748b;
+  --border: #e2e8f0;
+  --fs-sm: 0.85rem;
+  --fs: 0.95rem;
+  --fs-lg: 1.1rem;
   --achilles: #0f766e;
   --fleming:  #b45309;
   --loesby:   #6d28d9;
-  --muted: #64748b;
-  --border: #e2e8f0;
 }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+       background: #f0f2f5; color: var(--text); font-size: var(--fs); line-height: 1.55; }
+a { color: inherit; }
+h1, h2 { font-size: var(--fs-lg); font-weight: 600; }
+.small { font-size: var(--fs-sm); color: var(--muted); }
 
 /* ── Header ── */
 header {
@@ -31,61 +37,51 @@ header {
   box-shadow: 0 2px 8px rgba(0,0,0,0.3);
 }
 .header-top { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; margin-bottom: 8px; }
-header h1 { font-size: 1.2rem; font-weight: 700; }
-header .subtitle { font-size: 0.8rem; opacity: 0.7; }
+header .subtitle, #count { font-size: var(--fs-sm); opacity: 0.7; }
 .header-controls { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
 header input {
   flex: 1; min-width: 180px; max-width: 320px;
   padding: 6px 14px; border-radius: 20px; border: none;
-  font-size: 0.875rem; outline: none; background: rgba(255,255,255,0.15); color: white;
+  font-size: var(--fs-sm); outline: none; background: rgba(255,255,255,0.15); color: white;
 }
 header input::placeholder { color: rgba(255,255,255,0.55); }
 header input:focus { background: rgba(255,255,255,0.25); }
 .chips { display: flex; gap: 6px; flex-wrap: wrap; }
 .chip {
   border: 1px solid rgba(255,255,255,0.35); background: transparent; color: white;
-  border-radius: 20px; padding: 4px 12px; font-size: 0.8rem; cursor: pointer;
+  border-radius: 20px; padding: 3px 12px; font-size: var(--fs-sm); cursor: pointer;
   display: inline-flex; align-items: center; gap: 6px;
 }
-.chip[aria-pressed="true"] { background: white; color: #2c3e50; border-color: white; }
+.chip[aria-pressed="true"] { background: white; color: var(--text); border-color: white; }
 .chip .dot { width: 9px; height: 9px; border-radius: 50%; }
-#count { font-size: 0.8rem; opacity: 0.7; white-space: nowrap; }
+#count { white-space: nowrap; }
 
 main { max-width: 1180px; margin: 0 auto; padding: 0 24px 48px; }
+.panel { background: white; border: 1px solid var(--border); border-radius: 10px; padding: 16px 20px; }
+.panel h2 { margin-bottom: 10px; }
+.panel p + p { margin-top: 8px; }
 
 /* ── Intro ── */
-.sponsors {
-  background: white; border: 1px solid var(--border); border-radius: 10px;
-  margin-top: 20px; padding: 16px 20px; text-align: center;
-}
-.sponsors .label { font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
-.sponsor-list { display: flex; justify-content: center; flex-wrap: wrap; gap: 6px 22px; margin-top: 6px; }
-.sponsor-list a { font-weight: 700; font-size: 1.02rem; text-decoration: none; }
+.sponsors { margin-top: 20px; text-align: center; }
+.sponsor-list { display: flex; justify-content: center; flex-wrap: wrap; gap: 4px 22px; margin: 4px 0; }
+.sponsor-list a { font-weight: 600; text-decoration: none; }
+.sponsor-list a.co { font-weight: 400; }
 .sponsor-list a:hover { text-decoration: underline; }
-.sponsor-list .co { font-weight: 500; font-size: 0.9rem; color: var(--muted); }
-.event-meta { font-size: 0.85rem; color: var(--muted); margin-top: 8px; }
 
 .intro-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 16px; }
 @media (max-width: 820px) { .intro-grid { grid-template-columns: 1fr; } }
-.panel { background: white; border: 1px solid var(--border); border-radius: 10px; padding: 16px 20px; }
-.panel h2 { font-size: 0.95rem; margin-bottom: 10px; }
-.panel p { font-size: 0.88rem; color: #4a5568; }
-.panel p + p { margin-top: 8px; }
-
 .candidates { display: grid; gap: 8px; }
-.cand { display: flex; align-items: center; gap: 10px; font-size: 0.9rem; }
+.cand { display: flex; align-items: center; gap: 10px; }
 .cand .bar { width: 4px; align-self: stretch; border-radius: 2px; }
-.cand .name { font-weight: 700; }
-.cand .party { color: var(--muted); font-size: 0.8rem; }
-.cand .site { margin-left: auto; font-size: 0.8rem; white-space: nowrap; }
-.cand.absent { opacity: 0.75; }
-.cand.absent .name { font-weight: 600; }
+.cand .name { font-weight: 600; }
+.cand .site { margin-left: auto; white-space: nowrap; }
+.links { display: flex; flex-wrap: wrap; gap: 4px 16px; }
 
 /* ── Table of contents ── */
 .toc { margin-top: 16px; }
 .toc ol { list-style: none; display: flex; flex-wrap: wrap; gap: 6px; }
 .toc a {
-  display: inline-block; text-decoration: none; font-size: 0.82rem;
+  display: inline-block; text-decoration: none; font-size: var(--fs-sm);
   background: #eef2f7; border-radius: 6px; padding: 4px 10px;
 }
 .toc a:hover { background: #dfe6ef; }
@@ -98,58 +94,51 @@ main { max-width: 1180px; margin: 0 auto; padding: 0 24px 48px; }
 }
 .q.follow-up { margin-top: 10px; border-left: 4px solid #cbd5e1; }
 .q-head { padding: 16px 20px 14px; border-bottom: 1px solid var(--border); }
-.q-topic { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
-.q-topic h2 { font-size: 1.1rem; }
-.q-topic .anchor { text-decoration: none; color: #94a3b8; font-size: 0.9rem; }
-.q-topic .anchor:hover { color: #2c3e50; }
-.badge { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.05em;
-         background: #eef2f7; color: var(--muted); border-radius: 4px; padding: 1px 6px; }
-.q-context { font-size: 0.85rem; color: var(--muted); margin-top: 8px; max-width: 860px; }
-.q-text { font-size: 0.98rem; font-weight: 600; margin-top: 8px; max-width: 860px; }
+.q-topic { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+.q-topic .anchor { text-decoration: none; }
+.q-topic .anchor:hover { color: var(--text); }
+.q-context { color: var(--muted); margin-top: 8px; max-width: 860px; }
+.q-text { font-weight: 600; margin: 8px 0 6px; max-width: 860px; }
 
 .watch {
   display: inline-flex; align-items: center; gap: 5px; white-space: nowrap;
-  font-size: 0.8rem; font-weight: 600; text-decoration: none;
-  color: #b91c1c; background: #fef2f2; border-radius: 14px; padding: 2px 10px;
+  font-size: var(--fs-sm); color: var(--muted); text-decoration: none;
 }
-.watch:hover { background: #fee2e2; }
-.watch svg { width: 10px; height: 10px; fill: currentColor; }
-.q-head .watch { margin-top: 10px; }
+.watch:hover { color: var(--text); text-decoration: underline; }
+.watch svg { width: 8px; height: 8px; fill: currentColor; }
 
 .answers { display: grid; grid-template-columns: repeat(3, 1fr); }
 @media (max-width: 960px) { .answers { grid-template-columns: 1fr; } }
 .ans { padding: 14px 20px 16px; border-top: 3px solid var(--c); }
 .answers .ans + .ans { border-left: 1px solid var(--border); }
 @media (max-width: 960px) { .answers .ans + .ans { border-left: none; } }
-.ans-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; flex-wrap: wrap; }
-.ans-name { font-weight: 700; color: var(--c); }
-.ans-order { font-size: 0.72rem; color: var(--muted); font-weight: 500; margin-left: 4px; }
-.ans-summary { font-size: 0.9rem; margin-top: 8px; }
+.ans-head { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; }
+.ans-name { font-weight: 600; color: var(--c); }
+.ans-summary { margin-top: 6px; }
 details { margin-top: 10px; }
-summary { cursor: pointer; font-size: 0.8rem; color: var(--muted); user-select: none; }
-summary:hover { color: #2c3e50; }
-.full { font-size: 0.86rem; color: #374151; margin-top: 8px; padding-left: 12px; border-left: 2px solid #e5e7eb; }
+summary { cursor: pointer; font-size: var(--fs-sm); color: var(--muted); user-select: none; }
+summary:hover { color: var(--text); }
+.full { margin-top: 8px; padding-left: 12px; border-left: 2px solid var(--border); }
 mark { background: #fde68a; color: inherit; border-radius: 2px; }
 
 /* ── Lightning round ── */
-.lightning { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+.lightning { width: 100%; border-collapse: collapse; }
 .lightning th, .lightning td { padding: 10px 14px; text-align: left; vertical-align: top; border-top: 1px solid var(--border); }
-.lightning thead th { border-top: none; font-size: 0.85rem; color: var(--c); border-bottom: 3px solid var(--c); }
+.lightning thead th { border-top: none; font-weight: 600; color: var(--c); border-bottom: 3px solid var(--c); }
 .lightning tbody th { font-weight: 600; width: 28%; }
-.lightning .short { font-weight: 600; }
-.lightning .quote { color: var(--muted); font-size: 0.8rem; margin: 2px 0 6px; }
+.lightning .quote { margin: 2px 0 4px; }
 @media (max-width: 760px) {
   .lightning thead { display: none; }
   .lightning, .lightning tbody, .lightning tr, .lightning th, .lightning td { display: block; width: auto; }
   .lightning tbody th { width: auto; border-top: 2px solid var(--border); background: #f8fafc; }
   .lightning td { border-top: none; border-left: 3px solid var(--c); margin: 6px 14px; padding: 4px 10px; }
-  .lightning td::before { content: attr(data-name); display: block; font-weight: 700; color: var(--c); font-size: 0.8rem; }
+  .lightning td::before { content: attr(data-name); display: block; font-weight: 600; color: var(--c); }
 }
 
 .hidden { display: none !important; }
 #empty { text-align: center; color: var(--muted); padding: 40px 0; }
 
-footer { max-width: 1180px; margin: 0 auto; padding: 0 24px 40px; font-size: 0.8rem; color: var(--muted); }
+footer { max-width: 1180px; margin: 0 auto; padding: 0 24px 40px; }
 footer p + p { margin-top: 6px; }
 </style>
 </head>
@@ -168,10 +157,10 @@ footer p + p { margin-top: 6px; }
 </header>
 
 <main>
-  <section class="sponsors" aria-label="Forum sponsors">
-    <div class="label">Presented by</div>
+  <section class="panel sponsors" aria-label="Forum sponsors">
+    <div class="small">Presented by</div>
     <div class="sponsor-list" id="sponsors"></div>
-    <div class="event-meta" id="event-meta"></div>
+    <div class="small" id="event-meta"></div>
   </section>
 
   <div class="intro-grid">
@@ -183,7 +172,7 @@ footer p + p { margin-top: 6px; }
       <h2>How to use this page</h2>
       <p>Each card shows a question from the forum, a short neutral summary of every candidate's answer, and the full answer as spoken. Click <strong>▶ Watch</strong> to open the video on YouTube at the moment that answer begins.</p>
       <p>Use the search box to find a topic, or the candidate buttons to show only certain candidates. Answers appear in the order candidates spoke.</p>
-      <p id="intro-links"></p>
+      <p class="links" id="intro-links"></p>
     </section>
   </div>
 
@@ -196,7 +185,7 @@ footer p + p { margin-top: 6px; }
   <div id="empty" class="hidden">No questions or answers match your search.</div>
 </main>
 
-<footer id="footer"></footer>
+<footer class="small" id="footer"></footer>
 
 <!-- Generated by forum/build_senate_forum.py: edit the script, not this data block -->
 <script type="application/json" id="forum-data">{
@@ -782,27 +771,27 @@ const fmt = t => {
 };
 const ytUrl = t => `https://www.youtube.com/watch?v=${EV.youtube_id}` + (t != null ? `&t=${Math.max(0, t - 1)}s` : '');
 const watch = (t, label = 'Watch') =>
-  `<a class="watch" href="${ytUrl(t)}" target="_blank" rel="noopener" title="Open on YouTube at ${fmt(t)}">${PLAY} ${label} ${fmt(t)}</a>`;
+  `<a class="watch" href="${ytUrl(t)}" target="_blank" rel="noopener" title="Open on YouTube at ${fmt(t)}">${PLAY} ${label}</a>`;
 
 // ── Static sections ──
 document.getElementById('subtitle').textContent = `${EV.date_label} · ${EV.location}`;
 document.getElementById('sponsors').innerHTML = EV.sponsors.map(s =>
   `<a href="${s.url}" target="_blank" rel="noopener" class="${s.role ? 'co' : ''}">${esc(s.name)}${s.role ? ` (${s.role})` : ''}</a>`).join('');
 document.getElementById('event-meta').innerHTML =
-  `Moderated by ${EV.moderators.map(m => `<strong>${esc(m.name)}</strong>`).join(' and ')} of the College of Idaho · ${esc(EV.election_label)}`;
+  `Moderated by ${EV.moderators.map(m => esc(m.name)).join(' and ')} of the College of Idaho · ${esc(EV.election_label)}`;
 
 document.getElementById('candidates').innerHTML =
   DATA.candidates.map(c => `
     <div class="cand" style="--c:var(--${c.id})">
       <span class="bar" style="background:var(--${c.id})"></span>
-      <div><div class="name">${esc(c.name)}</div><div class="party">${esc(c.party)}</div></div>
-      <a class="site" href="${c.url}" target="_blank" rel="noopener">Campaign site ↗</a>
+      <div><div class="name">${esc(c.name)}</div><div class="small">${esc(c.party)}</div></div>
+      <a class="site small" href="${c.url}" target="_blank" rel="noopener">Campaign site ↗</a>
     </div>`).join('') +
   DATA.absent.map(c => `
     <div class="cand absent">
       <span class="bar" style="background:#cbd5e1"></span>
-      <div><div class="name">${esc(c.name)}</div><div class="party">${esc(c.party)} — ${esc(c.note)}</div></div>
-      <a class="site" href="${c.url}" target="_blank" rel="noopener">Campaign site ↗</a>
+      <div><div class="name">${esc(c.name)}</div><div class="small">${esc(c.party)} — ${esc(c.note)}</div></div>
+      <a class="site small" href="${c.url}" target="_blank" rel="noopener">Campaign site ↗</a>
     </div>`).join('');
 
 document.getElementById('intro-links').innerHTML =
@@ -814,35 +803,34 @@ const all = [...DATA.questions, DATA.lightning, DATA.closing];
 let n = 0;
 all.forEach(q => { if (!q.follow_up) n++; q.num = q.follow_up ? null : n; });
 
-function answerHTML(a, i) {
+function answerHTML(a) {
   const c = CANDS[a.candidate];
-  const words = a.text.split(/\s+/).length;
   return `
     <article class="ans" data-cand="${c.id}" style="--c:var(--${c.id})">
       <div class="ans-head">
-        <span class="ans-name">${esc(c.name)}<span class="ans-order">${['1st','2nd','3rd'][i]}</span></span>
+        <span class="ans-name">${esc(c.name)}</span>
         ${watch(a.start)}
       </div>
       <p class="ans-summary">${esc(a.summary)}</p>
       <details>
-        <summary>Read full answer (${words} words)</summary>
+        <summary>Read full answer</summary>
         <div class="full" data-raw="${esc(a.text)}">${esc(a.text)}</div>
       </details>
     </article>`;
 }
 
 function headHTML(q) {
-  const badges = (q.follow_up ? '<span class="badge">Follow-up</span>' : '') +
-                 (q.audience ? '<span class="badge">Includes audience questions</span>' : '');
+  const badges = [q.follow_up && 'Follow-up', q.audience && 'Includes audience questions'].filter(Boolean)
+                   .map(b => `<span class="small">${b}</span>`).join('');
   return `
     <div class="q-head">
       <div class="q-topic">
         <h2>${q.num ? q.num + '. ' : ''}${esc(q.topic)}</h2>${badges}
-        <a class="anchor" href="#${q.id}" title="Link to this question">#</a>
+        <a class="anchor small" href="#${q.id}" title="Link to this question">#</a>
       </div>
       ${q.context ? `<p class="q-context">${esc(q.context)}</p>` : ''}
       ${q.question ? `<p class="q-text">${esc(q.question)}</p>` : ''}
-      ${watch(q.start, q.question ? 'Question at' : 'Starts at')}
+      ${watch(q.start, q.question ? 'Watch question' : 'Watch')}
     </div>`;
 }
 
@@ -855,8 +843,8 @@ function lightningHTML(q) {
       <th scope="row">${esc(it.question)}</th>
       ${order.map(id => { const a = by[id]; return `
         <td class="ans" data-cand="${id}" data-name="${esc(CANDS[id].name)}" style="--c:var(--${id})">
-          <div class="short">${esc(a.summary)}</div>
-          <div class="quote full" data-raw="${esc(a.text)}">“${esc(a.text)}”</div>
+          <div>${esc(a.summary)}</div>
+          <div class="quote full small" data-raw="${esc(a.text)}">“${esc(a.text)}”</div>
           ${watch(a.start)}
         </td>`; }).join('')}
     </tr>`;
