@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Caldwell ALPR Price Per Arrest</title>
+<meta name="description" content="Caldwell has committed $528,800 to Flock camera contracts. CPD credits the cameras with 80 arrests, about 2% of its arrests since late 2023. That is $6,610 per arrest.">
+<link rel="canonical" href="https://caldwell.pages.dev/flock-alpr-cost-per-arrest">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Ctown Dev">
+<meta property="og:url" content="https://caldwell.pages.dev/flock-alpr-cost-per-arrest">
+<meta property="og:title" content="What did each ALPR arrest cost Caldwell?">
+<meta property="og:description" content="$528,800 in Flock contracts. 80 arrests. About 2% of CPD's arrests since late 2023.">
+<meta property="og:image" content="https://caldwell.pages.dev/flock-alpr-cost-per-arrest-og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="A license plate reading $6,610 per arrest: Caldwell's $528,800 in Flock contracts divided by the 80 arrests CPD credits to the cameras">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="What did each ALPR arrest cost Caldwell?">
+<meta name="twitter:description" content="$528,800 in Flock contracts. 80 arrests. About 2% of CPD's arrests since late 2023.">
+<meta name="twitter:image" content="https://caldwell.pages.dev/flock-alpr-cost-per-arrest-og.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800;900&family=Public+Sans:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one narrow column on a light page. Blue carries the numbers; gold marks the cameras' share.
+   Single light theme by choice. */
+:root {
+  color-scheme: light;
+  --paper: #f3f5f9;
+  --card: #ffffff;
+  --ink: #13213f;
+  --muted: #566378;
+  --rule: #d8dee8;
+  --blue: #1d3f94;
+  --blue-mid: #a9b9dc;
+  --gold: #f5bd1f;
+  --gold-deep: #8a5d00;
+  --gold-soft: #fdf1c7;
+  --display: "Big Shoulders Display", "Arial Narrow", "Helvetica Neue", sans-serif;
+  --body: "Public Sans", "Helvetica Neue", Arial, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+}
+
+* { box-sizing: border-box; }
+body { background: var(--paper); color: var(--ink); font-family: var(--body); font-size: 16px; line-height: 1.5; margin: 0; }
+a { color: var(--blue); }
+.wrap { max-width: 780px; margin: 0 auto; padding-inline: 20px; padding-block: 40px 56px; display: grid; gap: 36px; }
+.wrap > *, .panel > *, .hero > * { min-width: 0; }
+
+.kicker { font-family: var(--mono); font-size: 12.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--gold-deep); margin: 0; font-weight: 500; }
+h1, h2 { font-family: var(--display); font-weight: 800; letter-spacing: .005em; line-height: 1.02; text-wrap: balance; margin: 0; color: var(--ink); }
+h1 { font-size: clamp(40px, 8vw, 64px); }
+h2 { font-size: clamp(28px, 5vw, 38px); }
+p { margin: 0; max-width: 62ch; }
+.lede { font-size: 18px; color: var(--muted); }
+.lede strong, p strong { color: var(--ink); }
+.num { font-variant-numeric: tabular-nums; }
+
+header { display: grid; gap: 14px; }
+header .bar { width: 72px; height: 6px; background: var(--gold); border-radius: 3px; }
+
+/* Hero: a license plate */
+.hero { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 28px; align-items: center; }
+@media (max-width: 640px) { .hero { grid-template-columns: minmax(0, 1fr); } }
+.plate {
+  background: #fff; color: var(--ink);
+  border: 3px solid var(--blue); border-radius: 18px; overflow: hidden;
+  box-shadow: 0 1px 0 var(--rule), 0 10px 24px -14px rgba(19, 33, 63, .45);
+  display: grid; grid-template-rows: auto 1fr auto; justify-items: center;
+  max-width: 100%; position: relative;
+}
+.plate::before, .plate::after {
+  content: ""; position: absolute; top: 9px; width: 12px; height: 7px; border-radius: 6px;
+  background: var(--paper); border: 2px solid var(--blue);
+}
+.plate::before { left: 26%; } .plate::after { right: 26%; }
+.plate .top { font-family: var(--display); font-weight: 800; letter-spacing: .28em; font-size: 15px; color: var(--blue); margin-top: 24px; }
+.plate .big { font-family: var(--display); font-weight: 900; font-size: clamp(64px, 13vw, 104px); line-height: 1; letter-spacing: .02em; align-self: center; color: var(--ink); padding-block: 2px 12px; }
+.plate .bottom { width: 100%; text-align: center; background: var(--gold); color: var(--ink); font-family: var(--display); font-weight: 800; letter-spacing: .3em; font-size: 15px; padding: 5px 0 4px; }
+
+.equation { display: grid; gap: 10px; font-family: var(--mono); font-size: 15px; }
+.equation .row { display: flex; justify-content: space-between; gap: 12px; border-bottom: 1px solid var(--rule); padding-bottom: 8px; }
+.equation .row span:last-child { font-weight: 500; }
+.equation .row.total { border-bottom: 0; color: var(--blue); font-weight: 500; font-size: 17px; background: var(--gold-soft); padding: 8px 10px; margin-inline: -10px; border-radius: 4px; }
+.aside { font-size: 14.5px; color: var(--muted); }
+
+/* Panels */
+.panel { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 26px 24px; display: grid; gap: 16px; }
+.panel .stat { font-family: var(--display); font-weight: 900; font-size: clamp(56px, 11vw, 84px); line-height: .9; color: var(--blue); }
+.panel-head { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 20px; align-items: end; }
+@media (max-width: 520px) { .panel-head { grid-template-columns: minmax(0, 1fr); gap: 6px; } .panel { padding: 20px 16px; } }
+.panel-head h2 { padding-bottom: 6px; }
+
+.dots { display: grid; grid-template-columns: repeat(25, 1fr); gap: 5px; max-width: 520px; }
+.dots i { aspect-ratio: 1; border-radius: 50%; background: var(--blue-mid); display: block; }
+.dots i.hit { background: var(--gold); box-shadow: 0 0 0 2px var(--gold-deep) inset; }
+.legend { display: flex; flex-wrap: wrap; gap: 8px 20px; font-size: 14px; color: var(--muted); }
+.legend span::before { content: ""; display: inline-block; width: 11px; height: 11px; border-radius: 50%; margin-right: 7px; vertical-align: -1px; background: var(--blue-mid); }
+.legend span.g::before { background: var(--gold); box-shadow: 0 0 0 1.5px var(--gold-deep) inset; }
+
+.timeline { display: grid; gap: 8px; }
+.track { position: relative; height: 34px; background: var(--blue-mid); border-radius: 4px; overflow: hidden; }
+.track .slice { position: absolute; left: 0; top: 0; bottom: 0; width: 1.95%; min-width: 6px; background: var(--gold); box-shadow: 0 0 0 2px var(--gold-deep) inset; }
+.ticks { display: flex; justify-content: space-between; gap: 12px; font-family: var(--mono); font-size: 12.5px; color: var(--muted); }
+
+.officers { display: grid; grid-template-columns: repeat(auto-fill, minmax(18px, 1fr)); gap: 6px 4px; max-width: 620px; }
+.officers svg { width: 100%; height: auto; display: block; }
+
+/* Ledger */
+table { width: 100%; border-collapse: collapse; font-size: 15px; }
+th, td { text-align: left; padding: 10px 8px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { font-family: var(--mono); font-weight: 500; font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+td.amt, th.amt { text-align: right; font-family: var(--mono); white-space: nowrap; font-variant-numeric: tabular-nums; }
+td small { color: var(--muted); display: block; font-size: 13.5px; }
+td:first-child, td:first-child small { white-space: nowrap; }
+tr.total td { border-bottom: 0; font-weight: 700; }
+tr.total td.amt { color: var(--blue); }
+.table-wrap { overflow-x: auto; }
+
+footer { display: grid; gap: 10px; font-size: 13.5px; color: var(--muted); border-top: 1px solid var(--rule); padding-top: 20px; }
+footer p { max-width: none; }
+footer ul { margin: 0; padding-left: 18px; display: grid; gap: 4px; }
+footer a { overflow-wrap: anywhere; }
+.png-only { display: none; }
+html.png .png-only { display: block; }
+html.png .web-only { display: none; }
+</style>
+</head>
+<body>
+<script>if (location.search.indexOf('png') !== -1) document.documentElement.className = 'png';</script>
+<div class="wrap">
+  <header>
+    <p class="kicker">Caldwell, Idaho · Automated license plate readers · 2023–2026</p>
+    <h1>What did each ALPR arrest cost Caldwell?</h1>
+    <div class="bar" aria-hidden="true"></div>
+    <p class="lede">Caldwell Police told City Council that its camera network led to <strong>80 arrests</strong>. Here is that number next to what the city has committed to spend, and next to every other arrest CPD made in the same period.</p>
+  </header>
+
+  <section class="hero" aria-label="Cost per arrest">
+    <div class="plate" role="img" aria-label="$6,610 per arrest">
+      <span class="top">CALDWELL · IDAHO</span>
+      <span class="big num">$6,610</span>
+      <span class="bottom">PER ARREST</span>
+    </div>
+    <div class="equation">
+      <div class="row"><span>Committed in Flock contracts</span><span class="num">$528,800</span></div>
+      <div class="row"><span>÷ Arrests CPD credits to ALPR</span><span class="num">80</span></div>
+      <div class="row total"><span>= Cost per arrest</span><span class="num">$6,610</span></div>
+      <p class="aside">Counting only the license plate cameras: <strong class="num">$4,731</strong> per arrest.</p>
+    </div>
+  </section>
+
+  <section class="panel">
+    <div class="panel-head">
+      <div class="stat num">2%</div>
+      <h2>of CPD's arrests involved the cameras</h2>
+    </div>
+    <div class="dots" id="dots" aria-hidden="true"></div>
+    <div class="legend"><span class="g">ALPR-related arrests (80)</span><span>All other CPD arrests (about 4,000)</span></div>
+    <p>From late 2023 to mid-2026, Caldwell Police made roughly 4,100 arrests. The cameras were part of 80 of them, about <strong>2½ a month</strong>. CPD averages about <strong>128 arrests a month</strong>.</p>
+  </section>
+
+  <section class="panel">
+    <div class="panel-head">
+      <div class="stat num">19 days</div>
+      <h2>of normal police work</h2>
+    </div>
+    <div class="timeline" aria-hidden="true">
+      <div class="track"><div class="slice"></div></div>
+      <div class="ticks"><span>Nov 2023 · cameras installed</span><span>Jul 2026</span></div>
+    </div>
+    <p>CPD makes about 4.2 arrests a day. At that pace, the department makes as many arrests in <strong>19 days</strong> as the cameras helped with in about 2½ years.</p>
+  </section>
+
+  <section class="panel">
+    <div class="panel-head">
+      <div class="stat num">1½</div>
+      <h2>officers' worth of arrests</h2>
+    </div>
+    <div class="officers" id="officers" aria-hidden="true"></div>
+    <div class="legend"><span class="g">Arrests the cameras helped with each year</span><span>CPD's 73 officers</span></div>
+    <p>Council members have said that dropping the cameras would mean hiring many more officers. CPD averages about <strong>21 arrests per officer per year</strong>. The cameras were part of about <strong>30 a year</strong>, roughly what one and a half officers already do.</p>
+  </section>
+
+  <section class="panel">
+    <h2>Where the $528,800 goes</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Approved</th><th>What it bought</th><th class="amt">Contract total</th></tr></thead>
+        <tbody>
+          <tr><td>Oct 2023<small>Res. 276-23</small></td><td>33 Flock plate cameras and gunshot detection for 3 years, paid with federal ARPA relief funds<small>$318,450 of this was for the plate cameras</small></td><td class="amt">$378,450</td></tr>
+          <tr><td>Feb 2025<small>Res. 41-25</small></td><td>10 more Flock plate cameras, 2 years</td><td class="amt">$60,000</td></tr>
+          <tr><td>Aug 2025<small>Res. 284-25</small></td><td>18 video cameras and 1 plate camera at the cemetery</td><td class="amt">$27,350</td></tr>
+          <tr><td>Sep 2025<small>Order form</small></td><td>FreeForm AI search add-on, 3 years<small>$21,000 a year</small></td><td class="amt">$63,000</td></tr>
+          <tr class="total"><td></td><td>Total</td><td class="amt">$528,800</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="aside">These are only the contracts found so far. In Feb 2026 the Caldwell Housing Authority also agreed to pay the city $12,000 for 2 more Flock cameras, which isn't counted here.</p>
+  </section>
+
+  <footer>
+    <p><strong>How these numbers were figured.</strong> Dollar amounts are full contract totals, the way the city budgets them, including years not yet billed. The 80 arrests come from CPD's own slide to council, which gives no date range. We assume the count runs from installation (about Nov 2023, per the 2023 council memo) to the July 2026 presentation, about 32 months. CPD's total arrests come from Idaho State Police reports: 1,637 in 2024 and 1,444 in 2025. Late 2023 and 2026 are estimated at those years' rates. Even if all 80 ALPR arrests happened in 2024–25 alone, they would be 2.6% of arrests. The officer count (73) is from the city's police recruiting page, which is undated.</p>
+    <p class="png-only"><strong>Sources.</strong> Caldwell City Council Resolutions 276-23, 41-25 and 284-25 and Flock order forms; Caldwell Police Department slide to council, 2026; Idaho State Police, Crime in Idaho 2024 and 2025; Caldwell Police recruiting page. Links are in the comments.</p>
+    <div class="web-only">
+      <p><strong>Sources</strong></p>
+      <ul>
+        <li>Caldwell Police Department slide to City Council, 2026 (<a href="flock-cpd-alpr-slide.html">see the annotated slide</a>)</li>
+        <li>Idaho State Police, <a href="https://nibrs.isp.idaho.gov/CrimeInIdaho/Publication/Active/Jurisdictional/14.%20Canyon%20County.pdf">Crime in Idaho 2025, Canyon County</a></li>
+        <li>Idaho State Police, <a href="https://nibrs.isp.idaho.gov/CrimeInIdaho/Publication/Archived/CrimeInIdaho2024/Jurisdictional/14.%20Canyon%20County.pdf">Crime in Idaho 2024, Canyon County</a></li>
+        <li><a href="https://www.cityofcaldwell.org/Departments/Police/CPD-Recruitment">Caldwell Police recruiting page</a> (officer count)</li>
+        <li>City of Caldwell public records: Resolutions 276-23, 41-25, 284-25 and 052-26; Flock FreeForm order form signed Sep 30, 2025</li>
+      </ul>
+    </div>
+  </footer>
+</div>
+
+<script>
+(function () {
+  var dots = document.getElementById('dots');
+  for (var i = 0; i < 100; i++) {
+    var d = document.createElement('i');
+    if (i < 2) d.className = 'hit';
+    dots.appendChild(d);
+  }
+  var off = document.getElementById('officers');
+  var path = 'M10 2.2a4.2 4.2 0 1 1 0 8.4a4.2 4.2 0 1 1 0-8.4zM2 26c0-6.6 3.6-11.4 8-11.4s8 4.8 8 11.4z';
+  for (var j = 0; j < 73; j++) {
+    var kind = j === 0 ? 'full' : j === 1 ? 'half' : 'none';
+    var id = 'h' + j;
+    var fill = kind === 'full' ? 'var(--gold)' : kind === 'half' ? 'url(#' + id + ')' : 'var(--blue-mid)';
+    var stroke = kind === 'none' ? 'none' : 'var(--gold-deep)';
+    off.insertAdjacentHTML('beforeend', '<svg viewBox="0 0 20 27" aria-hidden="true">' +
+      (kind === 'half' ? '<defs><linearGradient id="' + id + '"><stop offset="50%" stop-color="var(--gold)"/><stop offset="50%" stop-color="var(--blue-mid)"/></linearGradient></defs>' : '') +
+      '<path d="' + path + '" fill="' + fill + '" stroke="' + stroke + '" stroke-width="1.2"/></svg>');
+  }
+})();
+</script>
+</body>
+</html>

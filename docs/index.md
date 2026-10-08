@@ -3,6 +3,10 @@
 ## SLFRF (ARPA)
 - [SLFRF/ARPA sunburst](spending_sunburst.html)
 
+## Flock / ALPR cameras
+- [What did each ALPR arrest cost Caldwell?](flock-alpr-cost-per-arrest.html)
+- [9 problems with CPD's ALPR slide](flock-cpd-alpr-slide.html)
+
 # Idaho
 - [Idaho ARPA Dashboard](idaho_arpa_dashboard.html)
 - [U.S. Senate Candidate Forum (Sept. 30, 2026)](senate-candidate-forum-2026.html)
